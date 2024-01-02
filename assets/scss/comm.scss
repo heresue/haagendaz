@@ -1,0 +1,173 @@
+@import 'variables', 'mixins', 'fonts', 'reset';
+
+// btn style (*mixin에서 해도 되고 comm에서 해도 됨)
+
+// card style
+
+// list style
+
+// layout
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    // 타블렛 버전을 할거면 max-width&media screen .wrap 설정할 필요 없을듯 (포트폴리오에 m/w을 명확하게 보여주기 위해 (ex 카카오)
+    max-width: 420px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 1280px) {
+    .wrap {
+        max-width: none;
+    }
+    
+}
+
+.header-fix {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+#main {
+    // min-height: calc(100vh -$hdH -$ftH);
+    //  > hd, ft의 유무에 따라 다르게 계산해줘야 해서 불편할 수도 있음
+    //  >> .wrap(dsp(flex), flex-dir(column), min-height & .main(fg1)로 설정
+    //      페이지별로 따로 빼주지않아도 되니까 더욱 편리
+    flex-grow: 1;
+}
+
+#footer {
+    height: $ftH;
+    background-color: $gray-100;
+}
+@media screen and (min-width: 1280px) {
+    .inner {
+        padding: 0;
+    }
+}
+
+// header
+#header {
+    width: 100%;
+    height: $hdH;
+    background-color: transparent;
+    position: absolute;
+    z-index: 10000;
+    .header-fix {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        padding: 0 var(--layout-padding);
+        height: 100%;
+        margin: 0;
+        #logo {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0 0 0;
+            a {
+                display: inline-block;
+                width: 116px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        // #gnb {
+        //     padding-top: 20px;
+        //     .cate-list {
+        //         display: flex;
+        //         li {
+        //             display: flex;
+        //             align-items: center;
+        //             padding: 0 15px;
+        //         }
+        //     }
+        // }
+        .btn-search {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .btn-search::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url(/images/common/icon\ _search_wt.png);
+        }
+    }
+}
+
+.gnb-wrap {
+    .inp-burger {
+        // display none으로 날리면 안됨. 체크가 되어야하니까
+        // 아래 8개 설정으로 날려준다 (저장해놓고 쓰기)
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        // input이 체크됐을 때
+        &:checked {
+            // + : 형제 선택자 (바로 뒤에 있는 인접 형제)
+            & + .label-burger {
+                // input이 체크됐을 때 디자인
+                .bar {
+                    // 2번째 bar 없애기
+                    &:nth-child(1) {
+                        transform: translateY(5px) rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(-3px) rotate(-45deg);
+                    }
+                }
+            }
+
+            // #gnb가 보이게
+            // ~ :형제 선택자 (일반 형제 선택)
+            & ~ #gnb {
+                display: flex;
+                left: 0;
+            }
+        }
+    }
+    // input이 체크되지 않았을 때 디자인
+    .label-burger {
+        position: absolute;
+        left: 16px;
+        top: 20px;
+        // top %로 표현할수없는지 다시확인
+        z-index: 1100;
+        display: flex;
+        flex-direction: column;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        .bar {
+            display: block;
+            margin-bottom: 7px;
+            width: 20px;
+            height: 1px;
+            border-radius: 1px;
+            background-color: white;
+            transition: all 0.3s;
+        }
+    }
+}
+
+// footer
+
+// 우선순위 때문에 main, sub는 뒤로 빼줌
+@import 'main', 'sub1';

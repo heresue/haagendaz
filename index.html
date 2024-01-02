@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainㅣHaagendaz</title>
+
+    <!-- 오픈그래프 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="페이지 제목" />
+    <meta property="og:description" content="페이지 설명" />
+    <meta
+    property="og:image"
+    content="http://www.mysite.com/article/article1_featured_image.jpg"
+    />
+    <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+
+    <!-- 트위터 카드 -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="페이지 제목" />
+    <meta name="twitter:description" content="페이지 설명" />
+    <meta
+    name="twitter:image"
+    content="http://www.mysite.com/article/article1.html"
+    />
+    <meta name="twitter:domain" content="사이트 명" />
+
+    <!-- 파비콘 -->
+    <!--<link rel="shortcut icon" href="favicon.ico" />-->
+    <link rel="icon" href="./favicon.png" />
+    <!-- reset.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Google Material Icons -->
+    <!-- icons -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+    rel="stylesheet"
+    />
+    <!-- symbols -->
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
+    />
+
+    <!-- swiper -->
+    <!-- 링크를 위로 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    
+    <!-- <link rel="stylesheet" href="./assets/css/comm.css"> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    
+
+    <!-- cdn js (font-awesome)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+
+    <!-- 내꺼 제일아래 -->
+    <link rel="stylesheet" href="./assets/css/comm.css">
+    <script defer src="./assets/js/comm.js"></script>
+    
+    
+</head>
+<body>
+    <div class="u-skip">
+        <a href="#gnb" class="blind">주메뉴 바로가기</a>
+        <a href="#main" class="blind">본문 바로가기</a>
+    </div>
+    <div class="wrap">
+        <header id="header">
+            <div class="header-fix">
+                <!-- container 또는 inner로 설정
+                inner로 한 번 더 싸주는 이유: 배경색이 들어가는 경우/전체 가운데정렬 등의 여백 설정 등 필요성
+                주로 pc버전에서 많이 사용-->
+                <h1 id="logo">
+                <!-- 로고가 가운데에 위치하는 경우에도 logo먼저 적어준다(bcs웹접근성(먼저읽어줘야하니까)) -->
+                    <a href="/">
+                        <!-- <img src="./images/common/logo_bgd.png" alt="로고 버건디"> -->
+                        <img src="./images/common/logo_wt_letter.png" alt="로고 화이트">
+                    </a>
+                </h1>
+                <div class="col-right">
+                    <!-- gnb -->
+                    <div class="gnb-wrap">
+                        <!-- 동적처리가 가능한 부분이기에 카멜표기법으로(gnbNav) -->
+                        <input type="checkbox" checked id="gnbNav" class="inp-burger">
+                        <!-- input&label > id, for값 동일해야함-->
+                        <label for="gnbNav" class="label-burger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <div class="blind">전체 메뉴 보기</div>
+                        </label>
+                        <nav id="gnb" class="blind">전체메뉴</nav>
+                    </div>
+                </div>
+                <!-- <div class="search">
+                    <a href="#">검색</a>
+                </div> -->
+                <button class="btn-search">
+                    <span class="blind">검색</span>
+                </button>
+        </div>
+        </header>
+        
+        <main id="main"> <span class="blind">main</span>
+            <div class="fp-section">
+                <swiper-container
+                    class="slide-intro"
+                    pagination="true"
+                    pagination-clickable="true"
+                    navigation="true"
+                    space-between="0"
+                    loop="true">
+                    <swiper-slide><img src="./images/main/m/m_slide1.jpg" alt=""></swiper-slide>
+                    <swiper-slide><img src="./images/main/m/m_slide2.jpg" alt=""></swiper-slide>
+                </swiper-container>
+            </div>
+
+            
+            <div class="best-section">
+                <div class="swiper swiper-best">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+            </div>
+            
+
+            <div class="section">
+                <div class="video_wrap">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hOGObbGY6FU?si=St7uPtI5rhSuFgr_&amp;controls=0&autoplay=1&mute=1&loop=1&showinfo=0&cc_load_policy=0&iv_load_policy=3&autohide=1&playsinline=1&playlist=hOGObbGY6FU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            
+            <div class="btm-section">
+                <!-- Swiper -->
+                <div class="swiper swiper-btm">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            
+
+
+    
+                <!-- <swiper-container class="slide-intro"
+                    pagination="true"
+                    pagination-clickable="true"
+                    navigation="true"
+                    space-between="30"
+                    loop="true">
+                    <swiper-slide>Slide 1</swiper-slide>
+                    <swiper-slide>Slide 2</swiper-slide>
+                    <swiper-slide>Slide 3</swiper-slide>
+                    <swiper-slide>Slide 4</swiper-slide>
+                    <swiper-slide>Slide 5</swiper-slide>
+                    <swiper-slide>Slide 6</swiper-slide>
+                    <swiper-slide>Slide 7</swiper-slide>
+                    <swiper-slide>Slide 8</swiper-slide>
+                    <swiper-slide>Slide 9</swiper-slide>
+                </swiper-container> -->
+            </div>
+
+            
+            
+
+        </main>
+
+        <footer id="footer">
+            <h1 class="logo">
+                <a href="#">logo</a>
+            </h1>
+            <div class="sns">
+                <a href="#">instagram</a>
+                <a href="#">youtube</a>
+                <a href="#">blog</a>
+                <!-- 글씨로 넣고, 백그라운드로 이미지 깔기 -->
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
