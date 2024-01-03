@@ -1,28 +1,23 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Poppins";
-  font-weight: 300;
-  src: url(../font/Poppins-Light.woff) format("woff");
+  font-family: "Pretendard";
+  src: url(../fonts/Pretendard-Light.woff) format("woff");
 }
 @font-face {
-  font-family: "Poppins";
-  font-weight: 400;
-  src: url(../fonts/Poppins-Regular.woff) format("woff");
+  font-family: "Pretendard";
+  src: url(../fonts/Pretendard-Light.woff) format("woff");
 }
 @font-face {
-  font-family: "Poppins";
-  font-weight: 500;
-  src: url(../fonts/Poppins-Medium.woff) format("woff");
+  font-family: "Pretendard";
+  src: url(../fonts/Pretendard-Regular.woff) format("woff");
 }
 @font-face {
-  font-family: "Poppins";
-  font-weight: 600;
-  src: url(../fonts/Poppins-SemiBold.woff) format("woff");
+  font-family: "Pretendard";
+  src: url(../fonts/Pretendard-Medium.woff) format("woff");
 }
 @font-face {
-  font-family: "Poppins";
-  font-weight: 700;
-  src: url(../fonts/Poppins-Bold.woff) format("woff");
+  font-family: "Pretendard";
+  src: url(../fonts/Pretendard-Bold.woff) format("woff");
 }
 /* reset */
 body,
@@ -139,7 +134,7 @@ body {
   background: #fff;
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #202020;
 }
 
@@ -403,12 +398,76 @@ legend {
   transition: all 0.3s;
 }
 
-.slide-intro {
+.swiper {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
-.slide-intro img {
-  filter: brightness(80%);
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper {
+  margin-left: 0 auto;
+  margin-right: auto;
+}
+
+.best-section {
+  display: block;
+  background: #eee;
+  color: #000;
+  margin: 130px 0;
+  padding: 0 16px;
+}
+.best-section .swiper {
+  width: 100%;
+  height: 383px;
+}
+.best-section .swiper-slide {
+  text-align: left;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.best-section .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.prtbox .info {
+  padding: 15px 0;
+}
+.prtbox .info .name {
+  font-size: 16px;
+  color: #666666;
+}
+.prtbox .info .price {
+  font-size: 20px;
+}
+.prtbox .info .sale {
+  font-size: 20px;
+  color: #ff0000;
+}
+.prtbox .info .cost {
+  font-size: 16px;
+  color: #cacaca;
 }
 
 .video_wrap {
@@ -425,8 +484,4 @@ legend {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.best-section {
-  background-color: aquamarine;
 }/*# sourceMappingURL=comm.css.map */

@@ -51,11 +51,14 @@
     <!-- swiper -->
     <!-- 링크를 위로 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
-    <!-- <link rel="stylesheet" href="./assets/css/comm.css"> -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
+    
+
 
     <!-- cdn js (font-awesome)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -113,45 +116,166 @@
         </header>
         
         <main id="main"> <span class="blind">main</span>
-            <div class="fp-section">
-                <swiper-container
-                    class="slide-intro"
-                    pagination="true"
-                    pagination-clickable="true"
-                    navigation="true"
-                    space-between="0"
-                    loop="true">
-                    <swiper-slide><img src="./images/main/m/m_slide1.jpg" alt=""></swiper-slide>
-                    <swiper-slide><img src="./images/main/m/m_slide2.jpg" alt=""></swiper-slide>
-                </swiper-container>
-            </div>
+            <section class="fp-section">
+                <!-- Swiper -->
+                <!-- Autoplay, infinite loop -->
+                <div class="swiper swiperFp">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/main/m/m_slide1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/main/m/m_slide2.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                </div>
+            </section>
 
             
-            <div class="best-section">
-                <div class="swiper swiper-best">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">Slide 1</div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
-                      <div class="swiper-slide">Slide 4</div>
-                      <div class="swiper-slide">Slide 5</div>
-                      <div class="swiper-slide">Slide 6</div>
-                      <div class="swiper-slide">Slide 7</div>
-                      <div class="swiper-slide">Slide 8</div>
-                      <div class="swiper-slide">Slide 9</div>
-                    </div>
+            <section class="best-section">
+                <!-- Swiper -->
+                <!-- freemode -->
+                <div class="swiper swiperBest">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="#" class="prtbox">
+                                <div class="nail">
+                                    <div class="img">
+                                        <img src="./images/main/macaron_double_chocolate_fint.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="name">하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml</div>
+                                    <div class="pricebox">
+                                        <strong class="price">15,500</strong>
+                                        <span class="sale"></span>
+                                        <span class="cost"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="prtbox">
+                                <div class="nail">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="name"></div>
+                                    <div class="pricebox">
+                                        <strong class="price">15,500</strong>
+                                        <span class="sale"></span>
+                                        <span class="cost"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="prtbox">
+                                <div class="nail">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="name"></div>
+                                    <div class="pricebox">
+                                        <strong class="price">15,500</strong>
+                                        <span class="sale"></span>
+                                        <span class="cost"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="prtbox">
+                                <div class="nail">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="name"></div>
+                                    <div class="pricebox">
+                                        <strong class="price">15,500</strong>
+                                        <span class="sale"></span>
+                                        <span class="cost"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="prtbox">
+                                <div class="nail">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="name"></div>
+                                    <div class="pricebox">
+                                        <strong class="price">15,500</strong>
+                                        <span class="sale"></span>
+                                        <span class="cost"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="prtbox">
+                                <div class="nail">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="name"></div>
+                                    <div class="pricebox">
+                                        <strong class="price">15,500</strong>
+                                        <span class="sale"></span>
+                                        <span class="cost"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="prtbox">
+                                <div class="nail">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info">
+                                    <div class="name"></div>
+                                    <div class="pricebox">
+                                        <strong class="price">15,500</strong>
+                                        <span class="sale"></span>
+                                        <span class="cost"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                     <div class="swiper-pagination"></div>
-            </div>
+                 </div>
+            </section>
+
+<!--             
+            <div class="best-section">
+                  
+                  <div class="swiper swiperBest">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                     </div>
+                <div class="swiper-pagination"></div>
+                 </div>
+            </div> -->
             
 
-            <div class="section">
+            <section class="section">
                 <div class="video_wrap">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/hOGObbGY6FU?si=St7uPtI5rhSuFgr_&amp;controls=0&autoplay=1&mute=1&loop=1&showinfo=0&cc_load_policy=0&iv_load_policy=3&autohide=1&playsinline=1&playlist=hOGObbGY6FU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-            </div>
+            </section>
 
             
-            <div class="btm-section">
+            <section class="btm-section">
                 <!-- Swiper -->
                 <div class="swiper swiper-btm">
                     <div class="swiper-wrapper">
@@ -167,7 +291,7 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-            </div>
+            </dsection>
 
             
 
