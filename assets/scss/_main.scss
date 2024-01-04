@@ -5,19 +5,14 @@
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  flex-shrink: 0;
+  img {
+    filter: brightness(80%);
+  }
 }
 
 .swiper {
@@ -25,54 +20,138 @@
   margin-right: auto;
 }
 
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+.text-wrap {
+  position: absolute;
+  display: inline-block;
+  margin: 0 auto;
+  bottom: 90px;
+}
+
+.logo-hd {
+  width: 181px;
+  height: 86px;
+}
+
+.logo-hd::after {
+  content: "";
+  display: block;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/common/logo_wt.png);
+  background-repeat: no-repeat;
+}
+.cross {
+  width: 35px;
+  height: 35px;
+  .bar {
+    display: block;
+    margin-bottom: 7px;
+    width: 45px;
+    height: 1px;
+    border-radius: 1px;
+    background-color: white;
+    &:nth-child(1) {
+    transform:  translateY(5px) rotate(45deg);
+    }
+    &:nth-child(2) {
+    transform: translateY(-3px) rotate(-45deg);
+    }
+  }
+}
+.logo-ph {
+  width: 268px;
+  height: 60px;
+}
+.logo-ph::after {
+  content: "";
+  display: block;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/common/logo_pierreherme_wt.png);
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+.swiper-button-next, .swiper-button-prev {
+  color: #eee;
+  font-weight: light;
+}
+
 
 // best-section
 .best-section {
     display: block;
-    background: #eee;
     color: #000;
     margin: 130px 0;
     padding: 0 16px;
-
     .swiper {
       width: 100%;
       height: 383px;
     }
-    .swiper-slide {
-      text-align: left;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .swiper-scrollbar-horizontal {
+      height: 2px;
+      background: #f1f1f1;
     }
-    .swiper-slide img {
+    .swiper-scrollbar-drag {
+      background: #333;
+    }
+}
+
+.pdtBox {
+  width: 264px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+   .thumb {
+    width: 100%;
+    height: 244px;
+    img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-}
-
-.prtbox {
+   }
   .info {
+    width: 100%;
     padding: 15px 0;
+    margin-top: -35px;
     .name {
       font-size: 16px;
+      font-weight: 400;
       color: #666666;
     }
-    .price {
-      font-size: 20px;
-    }
-    .sale {
-      font-size: 20px;
-      color: #ff0000;
-    }
-    .cost {
-      font-size: 16px;
-      color: #cacaca;
+    .priceBox {
+      display: block;
+      .price {
+        font-weight: 600;
+        font-size: 20px;
+        padding-right: 2px;
+      }
+      .sale {
+        font-size: 20px;
+        font-weight: 100;
+        color: #ff0000;
+        padding-right: 2px;
+      }
+      .cost {
+        font-size: 16px;
+        font-weight: 400;
+        color: #cacaca;
+        padding-right: 2px;
+        text-decoration: line-through
+      }
     }
   }
 }
+
 
 
 // video

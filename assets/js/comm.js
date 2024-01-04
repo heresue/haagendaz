@@ -3,10 +3,10 @@ var swiper = new Swiper(".swiperFp", {
   spaceBetween: 0,
   centeredSlides: true,
   loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -20,15 +20,23 @@ var swiper = new Swiper(".swiperFp", {
 
 // best-section
 var swiper = new Swiper(".swiperBest", {
-  slidesPerView: 2,
-  centeredSlides: true,
+  slidesPerView: "auto",
   spaceBetween: 20,
-  freeMode: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
   },
 });
+
+// var swiper = new Swiper(".swiperBest", {
+//   slidesPerView: auto,
+//   centeredSlides: true,
+//   spaceBetween: 20,
+//   freeMode: true,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
 
 
 

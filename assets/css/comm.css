@@ -1,22 +1,32 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Pretendard";
+  font-weight: 100;
+  letter-spacing: -2%;
   src: url(../fonts/Pretendard-Light.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
+  font-weight: 100;
+  letter-spacing: 0;
   src: url(../fonts/Pretendard-Light.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
+  font-weight: 200;
+  letter-spacing: -2%;
   src: url(../fonts/Pretendard-Regular.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
+  font-weight: 400;
+  letter-spacing: -2%;
   src: url(../fonts/Pretendard-Medium.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
+  font-weight: 600;
+  letter-spacing: -2%;
   src: url(../fonts/Pretendard-Bold.woff) format("woff");
 }
 /* reset */
@@ -404,20 +414,15 @@ legend {
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  flex-shrink: 0;
+}
+.swiper-slide img {
+  filter: brightness(80%);
 }
 
 .swiper {
@@ -425,9 +430,69 @@ legend {
   margin-right: auto;
 }
 
+.text-wrap {
+  position: absolute;
+  display: inline-block;
+  margin: 0 auto;
+  bottom: 90px;
+}
+
+.logo-hd {
+  width: 181px;
+  height: 86px;
+}
+
+.logo-hd::after {
+  content: "";
+  display: block;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/common/logo_wt.png);
+  background-repeat: no-repeat;
+}
+
+.cross {
+  width: 35px;
+  height: 35px;
+}
+.cross .bar {
+  display: block;
+  margin-bottom: 7px;
+  width: 45px;
+  height: 1px;
+  border-radius: 1px;
+  background-color: white;
+}
+.cross .bar:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.cross .bar:nth-child(2) {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.logo-ph {
+  width: 268px;
+  height: 60px;
+}
+
+.logo-ph::after {
+  content: "";
+  display: block;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/common/logo_pierreherme_wt.png);
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #eee;
+  font-weight: light;
+}
+
 .best-section {
   display: block;
-  background: #eee;
   color: #000;
   margin: 130px 0;
   padding: 0 16px;
@@ -436,38 +501,62 @@ legend {
   width: 100%;
   height: 383px;
 }
-.best-section .swiper-slide {
+.best-section .swiper-scrollbar-horizontal {
+  height: 2px;
+  background: #f1f1f1;
+}
+.best-section .swiper-scrollbar-drag {
+  background: #333;
+}
+
+.pdtBox {
+  width: 264px;
   text-align: left;
-  background: #fff;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
-.best-section .swiper-slide img {
+.pdtBox .thumb {
+  width: 100%;
+  height: 244px;
+}
+.pdtBox .thumb img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.prtbox .info {
+.pdtBox .info {
+  width: 100%;
   padding: 15px 0;
+  margin-top: -35px;
 }
-.prtbox .info .name {
+.pdtBox .info .name {
   font-size: 16px;
+  font-weight: 400;
   color: #666666;
 }
-.prtbox .info .price {
-  font-size: 20px;
+.pdtBox .info .priceBox {
+  display: block;
 }
-.prtbox .info .sale {
+.pdtBox .info .priceBox .price {
+  font-weight: 600;
   font-size: 20px;
+  padding-right: 2px;
+}
+.pdtBox .info .priceBox .sale {
+  font-size: 20px;
+  font-weight: 100;
   color: #ff0000;
+  padding-right: 2px;
 }
-.prtbox .info .cost {
+.pdtBox .info .priceBox .cost {
   font-size: 16px;
+  font-weight: 400;
   color: #cacaca;
+  padding-right: 2px;
+  text-decoration: line-through;
 }
 
 .video_wrap {
