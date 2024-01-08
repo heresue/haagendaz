@@ -6,12 +6,10 @@
 
 .swiper-slide {
   display: flex;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
+  position: relative;
   img {
     filter: brightness(80%);
+    width: 100%;
   }
 }
 
@@ -23,9 +21,14 @@
 // ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 .text-wrap {
   position: absolute;
-  display: inline-block;
-  margin: 0 auto;
-  bottom: 90px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
 }
 
 .logo-hd {
@@ -45,6 +48,7 @@
 .cross {
   width: 35px;
   height: 35px;
+  margin-top: 10px;
   .bar {
     display: block;
     margin-bottom: 7px;

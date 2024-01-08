@@ -310,8 +310,9 @@ legend {
 }
 
 #footer {
-  height: 735px;
-  background-color: #F5F5F5;
+  height: 635px;
+  background-color: #000;
+  color: #fff;
 }
 
 @media screen and (min-width: 1280px) {
@@ -408,6 +409,61 @@ legend {
   transition: all 0.3s;
 }
 
+#footer {
+  padding: 35px 21px;
+}
+#footer .logo {
+  display: block;
+  width: 181px;
+  height: 86px;
+}
+#footer .logo img {
+  width: 100%;
+}
+#footer .lang {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 55px 0;
+}
+#footer .lang span {
+  font-size: 16px;
+}
+#footer .separator {
+  border: 0;
+  border-top: 1px solid #9b9b9b;
+  margin: 0;
+}
+
+#footer .accordion ul > li {
+  overflow: hidden;
+  max-height: 40px;
+  transition: 0.3s;
+}
+#footer .accordion ul > li.on {
+  max-height: 600px;
+}
+#footer .accordion ul > li .title {
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .accordion ul > li .title img {
+  width: 16px;
+}
+#footer .accordion ul > li .desc {
+  padding: 16px;
+  font-size: 16px;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -415,14 +471,11 @@ legend {
 
 .swiper-slide {
   display: flex;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  flex-shrink: 0;
+  position: relative;
 }
 .swiper-slide img {
   filter: brightness(80%);
+  width: 100%;
 }
 
 .swiper {
@@ -432,9 +485,14 @@ legend {
 
 .text-wrap {
   position: absolute;
-  display: inline-block;
-  margin: 0 auto;
-  bottom: 90px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
 }
 
 .logo-hd {
@@ -455,6 +513,7 @@ legend {
 .cross {
   width: 35px;
   height: 35px;
+  margin-top: 10px;
 }
 .cross .bar {
   display: block;

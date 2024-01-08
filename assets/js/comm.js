@@ -40,3 +40,24 @@ var swiper = new Swiper(".swiperBest", {
 
 
 
+// footer
+// menu
+const accordion = document.querySelector(".accordion");
+function toggleAccordion() {
+  const clickedItem = this.parentNode;
+  const items = accordion.querySelectorAll("li");
+
+  items.forEach((item) => {
+    if (clickedItem === item) {
+      item.classList.toggle("on");
+    } else {
+      item.classList.remove("on");
+    }
+  });
+}
+
+const titles = accordion.querySelectorAll(".title");
+titles.forEach((title) => {
+  title.addEventListener("click", toggleAccordion);
+});
+

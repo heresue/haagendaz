@@ -39,13 +39,15 @@
 
 #footer {
     height: $ftH;
-    background-color: $gray-100;
+    background-color: $black;
+    color: $white;
 }
 @media screen and (min-width: 1280px) {
     .inner {
         padding: 0;
     }
 }
+
 
 // header
 #header {
@@ -168,6 +170,122 @@
 }
 
 // footer
+
+#footer {
+    padding: 35px 21px;
+    .logo {
+        display: block;
+        width: 181px;
+        height: 86px;
+        img {
+            width: 100%;
+        }
+    }
+    .lang {
+        display: flex;
+        width: 100%;
+        height: 40px;
+        border: 1px solid $white;
+        border-radius: 40px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 55px 0;
+        span {
+            font-size: 16px;
+        }
+    }
+    
+    .separator {
+        border: 0;
+        border-top: 1px solid #9b9b9b;
+        margin: 0;
+    }
+}
+
+
+#footer {
+    .accordion ul > li {
+        overflow: hidden;
+        max-height: 40px;
+        transition: 0.3s;
+    }
+    .accordion ul > li.on {
+        max-height: 600px;
+    }
+    .accordion ul > li .title {
+        height: 40px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        // padding-left: 8px;
+        img {
+            width: 16px;
+        }
+    }
+        
+    .accordion ul > li .desc {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+// .ft-inner {
+//     li {
+//         width: 100%;
+//         display: flex;
+//         color: $white;
+//         font-size: 20px;
+//         font-weight: 600;
+//         justify-content: space-between;
+//         align-items: center;
+//         margin: 30px 0;
+        
+//         img {
+//             width: 16px;
+//         }
+//     }
+// }
+
+// .ft-inner {
+//     width: 100%;
+//     margin: 30px 0;
+//     li {
+//         &.show {
+//           transition:all 1s;
+    
+//           .tit {
+//             &::after {    
+//               width: 0;
+//               height: 0;
+//               border-left: 6px solid transparent;
+//               border-right: 6px solid transparent;
+//               border-bottom: 10px solid ;
+//               border-top:none;
+//               }
+//           }
+//           .sub {
+//             display:block;
+//             opacity:1;
+//           }
+//         }
+//     }
+// }
+
+
+
+
+  
+
+
 
 // 우선순위 때문에 main, sub는 뒤로 빼줌
 @import 'main', 'sub1';
