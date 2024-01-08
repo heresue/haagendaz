@@ -1,32 +1,24 @@
 @import 'variables', 'mixins', 'fonts', 'reset';
 
-// btn style (*mixin에서 해도 되고 comm에서 해도 됨)
-
-// card style
-
-// list style
-
 // layout
 .wrap {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     // 타블렛 버전을 할거면 max-width&media screen .wrap 설정할 필요 없을듯 (포트폴리오에 m/w을 명확하게 보여주기 위해 (ex 카카오)
-    max-width: 420px;
+    max-width: 100%;
     margin: 0 auto;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 420px) {
     .wrap {
-        max-width: none;
+        max-width: 100%;
     }
-    
 }
 
 .header-fix {
-    max-width: 420px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-    
 }
 
 #main {
@@ -38,15 +30,14 @@
 }
 
 #footer {
-    height: $ftH;
     background-color: $black;
     color: $white;
 }
-@media screen and (min-width: 1280px) {
-    .inner {
-        padding: 0;
-    }
-}
+// @media screen and (min-width: 1280px) {
+//     .inner {
+//         padding: 0;
+//     }
+// }
 
 
 // header
@@ -101,7 +92,7 @@
             display: block;
             width: 20px;
             height: 20px;
-            background-image: url(/images/common/icon\ _search_wt.png);
+            background-image: url(/images/common/icon_search_wt.png);
         }
     }
 }
@@ -149,11 +140,10 @@
     .label-burger {
         position: absolute;
         left: 16px;
-        top: 20px;
-        // top %로 표현할수없는지 다시확인
         z-index: 1100;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: 70px;
         height: 70px;
         cursor: pointer;
@@ -209,10 +199,16 @@
     .accordion ul > li {
         overflow: hidden;
         max-height: 40px;
-        transition: 0.3s;
+        margin: 30px 0;
+        
+        
     }
     .accordion ul > li.on {
         max-height: 600px;
+        transition: all 0.5s ease-in-out;
+        img {
+            rotate: -180deg;
+        }
     }
     .accordion ul > li .title {
         height: 40px;
@@ -220,72 +216,57 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
-        // padding-left: 8px;
         img {
             width: 16px;
         }
     }
-        
     .accordion ul > li .desc {
+        display: block;
         padding: 16px;
         font-size: 16px;
     }
 }
 
+.ft-inner {
+    margin: 33px 26px;
+}
 
+.ft-sns {
+    margin: 30px 0;
+    display: flex;
+    gap: 20px;
+    .cir {
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        text-indent: -9999px;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .ytb {
+        background-image: url(/images/common/icon_youtube.png);
+    }
+    .fb {
 
+        background-image: url(/images/common/icon_facebook.png);
+    }
+    .ins {
 
+        background-image: url(/images/common/icon_instagram.png);
+    }
+}
 
-
-// .ft-inner {
-//     li {
-//         width: 100%;
-//         display: flex;
-//         color: $white;
-//         font-size: 20px;
-//         font-weight: 600;
-//         justify-content: space-between;
-//         align-items: center;
-//         margin: 30px 0;
-        
-//         img {
-//             width: 16px;
-//         }
-//     }
-// }
-
-// .ft-inner {
-//     width: 100%;
-//     margin: 30px 0;
-//     li {
-//         &.show {
-//           transition:all 1s;
-    
-//           .tit {
-//             &::after {    
-//               width: 0;
-//               height: 0;
-//               border-left: 6px solid transparent;
-//               border-right: 6px solid transparent;
-//               border-bottom: 10px solid ;
-//               border-top:none;
-//               }
-//           }
-//           .sub {
-//             display:block;
-//             opacity:1;
-//           }
-//         }
-//     }
-// }
-
-
-
-
-  
-
-
+.copyright {
+    font-size: 12px;
+}
 
 // 우선순위 때문에 main, sub는 뒤로 빼줌
 @import 'main', 'sub1';

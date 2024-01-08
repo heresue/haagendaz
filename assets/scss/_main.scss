@@ -1,4 +1,16 @@
-// fp-section
+// intro-section
+#intro-section {
+  // 타블렛 버전을 할거면 max-width&media screen .wrap 설정할 필요 없을듯 (포트폴리오에 m/w을 명확하게 보여주기 위해 (ex 카카오)
+  // max-width: 420px;
+  // height: 100vh;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1280px) {
+  .intro-section {
+      max-width: none;
+  }
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -13,12 +25,6 @@
   }
 }
 
-.swiper {
-  margin-left: 0 auto;
-  margin-right: auto;
-}
-
-// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 .text-wrap {
   position: absolute;
   top: 50%;
@@ -77,9 +83,6 @@
   background-image: url(/images/common/logo_pierreherme_wt.png);
   background-repeat: no-repeat;
 }
-
-
-
 
 
 .swiper-button-next, .swiper-button-prev {
@@ -160,7 +163,7 @@
 
 // video
 .video_wrap {
-  clip-path:  inset(0%);
+  clip-path: inset(0%);
   pointer-events: none;
   position: relative;
 	height: 0;
@@ -174,3 +177,92 @@
     height: 100%;
   }
 }
+
+
+// fp-section
+.fp-wrap {
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.ele {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translateZ(0);
+}
+
+.imgBox {
+  position: relative;
+  background: url('/images/main/m/m_fp1_brand.jpg') no-repeat center center;
+  background-size: cover;
+  }
+  .imgBox::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
+  }
+  .textBox {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $white;
+    p {
+      font-size: 56px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+
+
+
+// #fullpage {
+//   height: 100%;
+//     position: relative;
+//     touch-action: none;
+//     // transform: translate3d(0px, -6452px, 0px);
+//     transition: all 1000ms ease 0s;
+// }
+
+// .fp-section.fp-table {
+//   height: 100vh;
+//     position: relative;
+//     display: table;
+//     table-layout: fixed;
+//     width: 100%;
+// }
+// .fp-tableCell {
+//   display: table-cell;
+//   vertical-align: top;
+//   width: 100%;
+//   height: 100vh;
+// }
+
+// .imgbox {
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+// }
+
+// .imgbox > div {
+//   width: 100%;
+//   height: 100%;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   transform: translateY(-50%);
+//   transition: 1s transform;
+//   background-image: url(/images/main/m/m_fp1_brand.jpg);
+// }

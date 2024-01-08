@@ -81,9 +81,6 @@
     <div class="wrap">
         <header id="header">
             <div class="header-fix">
-                <!-- container 또는 inner로 설정
-                inner로 한 번 더 싸주는 이유: 배경색이 들어가는 경우/전체 가운데정렬 등의 여백 설정 등 필요성
-                주로 pc버전에서 많이 사용-->
                 <h1 id="logo">
                 <!-- 로고가 가운데에 위치하는 경우에도 logo먼저 적어준다(bcs웹접근성(먼저읽어줘야하니까)) -->
                     <a href="/">
@@ -116,10 +113,10 @@
         </header>
         
         <main id="main"> <span class="blind">main</span>
-            <section class="fp-section">
+            <section id="intro-section">
                 <!-- Swiper -->
                 <!-- Autoplay, infinite loop -->
-                <div class="swiper swiperFp">
+                <div class="swiper swiperIntro">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="./images/main/m/m_slide1.jpg" alt="">
@@ -140,7 +137,7 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination "></div>
+                <div class="swiper-pagination"></div>
                 </div>
             </section>
 
@@ -240,30 +237,58 @@
                 </div>
             </section>
 
-            <section class="btm-section">
 
-            </dsection>
+            <section class="fp-section">
+                <div class="fp-wrap">
+                    <div class="ele imgBox brand"></div>
+                    <div class="ele textBox brand">
+                        <p>BRAND</p>
+                        <span>비교할 수 없는 퀄리티의 아이스크림,
+                            <br>
+                            하겐다즈의 59년 역사를 확인해보세요.</span>
+                    </div>
+                </div>
+                <div class="fp-wrap">
+                    <div class="ele imgBox quality"></div>
+                    <div class="ele textBox quality">
+                        <p>QUALITY</p>
+                        <span>하겐다즈의 엄격한 원칙을 바탕으로 만든 아이스크림
+                            <br><br>
+                            그 시작과 끝은 고품질의 원료와
+                            <br>
+                            60년 넘게 이어져 온 철저한 장인정신 입니다.
+                        </span>
+                    </div>
+                </div>
+                <div class="fp-wrap">
+                    <div class="ele imgBox contact"></div>
+                    <div class="ele textBox contact">
+                        <p>CONTACT</p>
+                        <span>고객과 오너에게 가장 탁월한 선택
+                            <br>
+                            하겐다즈가 제공하는 맞춤형 비즈니스 솔루션을 경험해보세요.</span>
+                    </div>
+                </div>
+            </section>
 
-            
+
+            <!-- <section class="btm-section" id="fullpage">
+                <div class="fp-section fp-table">
+                    <div class="fp-tableCell">
+                        <div class="imgbox">
+                            <div></div>
+                        </div>
+                        <div class="textbox">
+                            <div class="textwrap">
+                                <p class="title">brand</p>
+                                <span class="copy">설명설명</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
 
 
-    
-                <!-- <swiper-container class="slide-intro"
-                    pagination="true"
-                    pagination-clickable="true"
-                    navigation="true"
-                    space-between="30"
-                    loop="true">
-                    <swiper-slide>Slide 1</swiper-slide>
-                    <swiper-slide>Slide 2</swiper-slide>
-                    <swiper-slide>Slide 3</swiper-slide>
-                    <swiper-slide>Slide 4</swiper-slide>
-                    <swiper-slide>Slide 5</swiper-slide>
-                    <swiper-slide>Slide 6</swiper-slide>
-                    <swiper-slide>Slide 7</swiper-slide>
-                    <swiper-slide>Slide 8</swiper-slide>
-                    <swiper-slide>Slide 9</swiper-slide>
-                </swiper-container> -->
             </div>
 
             
@@ -271,64 +296,62 @@
 
         </main>
 
+
         <footer id="footer">
             <div class="ft-wrap">
                 <h1 class="logo">
                     <img src="./images/common/logo_wt.png" alt=""></a>
                 </h1>
-
                 <div class="lang">
                     <span>loc</span>
                     <span>한국</span>
                     </div>
-    
-                    <div class="separator"></div>
-                    
+                <div class="separator"></div>
                 <div class="accordion ft-inner">
                     <ul>
-                        <li class="on">
+                        <li class>
                             <div class="title">
                                 <span>소개</span>
                                 <img src="/images/common/icon_more_wt.png" alt="">
                             </div>
-                            <div class="desc">내용1</div>
-                            <div class="desc">내용1</div>
-                            <div class="desc">내용1</div>
+                            <a href="#" class="desc">하겐다즈 소개</a>
+                            <a href="#" class="desc">제품</a>
+                            <a href="#" class="desc">스토어</a>
                         </li>
-                        <li>
-                            <div class="title"><span>제목2</span> <i>화살표</i></div>
-                            <div class="desc">내용2</div>
+                        <li class>
+                            <div class="title">
+                                <span>도움이 필요하세요?</span>
+                                <img src="/images/common/icon_more_wt.png" alt="">
+                            </div>
+                            <a href="#" class="desc">고객 문의</a>
+                            <!-- <div class="desc">내용1</div> -->
+                            <a href="#" class="desc">쿠키 설정</a>
                         </li>
-                        <li>
-                            <div class="title"><span>제목3</span> <i>화살표</i></div>
-                            <div class="desc">내용3</div>
+                        <li class>
+                            <div class="title">
+                                <span>법적고지</span>
+                                <img src="/images/common/icon_more_wt.png" alt="">
+                            </div>
+                            <a href="#" class="desc">이용 약관</a>
+                            <a href="#" class="desc">개인정보 취급 방침</a>
+                            <a href="#" class="desc">데이터 프라이버시 요청</a>
                         </li>
                     </ul>
+                </div>
+                <div class="separator"></div>
+                <div class="ft-sns">
+                    <div class="cir">
+                        <a href="#" class="ytb">youtube</a>
                     </div>
-
-
-                    <!-- <ul class="ft-inner">
-                        <li>
-                            <span>소개</span>
-                            <img src="/images/common/icon_more_wt.png" alt="">
-                        </li>
-                        <li>
-                            <span>도움이 필요하세요?</span>
-                            <img src="/images/common/icon_more_wt.png" alt="">
-                        </li>
-                        <li>
-                            <span>법적고지</span>
-                            <img src="/images/common/icon_more_wt.png" alt="">
-                        </li>
-                    </ul> -->
-    
-                    <div class="separator"></div>
-    
-
-                <div class="sns">
-                    <a href="#">youtube</a>
-                    <a href="#">facebook</a>
-                    <a href="#">instagram</a>
+                    <div class="cir">
+                        <a href="#" class="fb">facebook</a>
+                    </div>
+                    <div class="cir">
+                        <a href="#" class="ins">instagram</a>
+                    </div>
+                    
+                    
+                    
                     <!-- 글씨로 넣고, 백그라운드로 이미지 깔기 -->
                 </div>
 

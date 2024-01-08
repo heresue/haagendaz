@@ -1,5 +1,5 @@
-// fp-section
-var swiper = new Swiper(".swiperFp", {
+// intro-section
+var swiper = new Swiper(".swiperIntro", {
   spaceBetween: 0,
   centeredSlides: true,
   loop: true,
@@ -37,6 +37,32 @@ var swiper = new Swiper(".swiperBest", {
 //     clickable: true,
 //   },
 // });
+
+
+
+// fp-section
+// 윈도우에 스크롤 이벤트를 걸어줌
+window.addEventListener("scroll", function () {
+  const section = document.querySelectorAll(".fp-section");
+
+  section.forEach(function (section) {
+      let bounds = section.getBoundingClientRect();
+      const imgbox = section.querySelector(".imgBox");
+      const textbox = section.querySelector(".textBox");
+
+      let scrolled = window.scrollY;
+      console.log(`scrollY : ${scrolled}`);
+      console.log(`bounds.top : ${bounds.top}`);
+      console.log(`bounds.bottom : ${bounds.bottom}`);
+      console.log(`window.innerHeight : ${window.innerHeight}`);
+      
+      if (bounds.top < window.innerHeight && bounds.bottom >= 0) {
+          let sectionScrolled = window.pageYOffset - section.offsetTop;
+          imgbox.style.transform = `translateY(${sectionScrolled * 0.8}px)`;
+          textbox.style.transform = `translateY(${sectionScrolled * 0.3}px)`;
+      }
+      })
+})
 
 
 

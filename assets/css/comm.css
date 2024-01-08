@@ -156,7 +156,6 @@ body {
 }
 /* color값은 디자인가이드에 맞게사용 */
 a {
-  color: #333;
   text-decoration: none;
 }
 a:active, a:hover {
@@ -290,17 +289,17 @@ legend {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 420px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 420px) {
   .wrap {
-    max-width: none;
+    max-width: 100%;
   }
 }
 .header-fix {
-  max-width: 420px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -310,16 +309,10 @@ legend {
 }
 
 #footer {
-  height: 635px;
   background-color: #000;
   color: #fff;
 }
 
-@media screen and (min-width: 1280px) {
-  .inner {
-    padding: 0;
-  }
-}
 #header {
   width: 100%;
   height: 62px;
@@ -362,7 +355,7 @@ legend {
   display: block;
   width: 20px;
   height: 20px;
-  background-image: url(/images/common/icon\ _search_wt.png);
+  background-image: url(/images/common/icon_search_wt.png);
 }
 
 .gnb-wrap .inp-burger {
@@ -391,10 +384,10 @@ legend {
 .gnb-wrap .label-burger {
   position: absolute;
   left: 16px;
-  top: 20px;
   z-index: 1100;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 70px;
   height: 70px;
   cursor: pointer;
@@ -444,10 +437,14 @@ legend {
 #footer .accordion ul > li {
   overflow: hidden;
   max-height: 40px;
-  transition: 0.3s;
+  margin: 30px 0;
 }
 #footer .accordion ul > li.on {
   max-height: 600px;
+  transition: all 0.5s ease-in-out;
+}
+#footer .accordion ul > li.on img {
+  rotate: -180deg;
 }
 #footer .accordion ul > li .title {
   height: 40px;
@@ -460,10 +457,59 @@ legend {
   width: 16px;
 }
 #footer .accordion ul > li .desc {
+  display: block;
   padding: 16px;
   font-size: 16px;
 }
 
+.ft-inner {
+  margin: 33px 26px;
+}
+
+.ft-sns {
+  margin: 30px 0;
+  display: flex;
+  gap: 20px;
+}
+.ft-sns .cir {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ft-sns a {
+  text-indent: -9999px;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.ft-sns .ytb {
+  background-image: url(/images/common/icon_youtube.png);
+}
+.ft-sns .fb {
+  background-image: url(/images/common/icon_facebook.png);
+}
+.ft-sns .ins {
+  background-image: url(/images/common/icon_instagram.png);
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+#intro-section {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .intro-section {
+    max-width: none;
+  }
+}
 .swiper {
   width: 100%;
   height: 100%;
@@ -476,11 +522,6 @@ legend {
 .swiper-slide img {
   filter: brightness(80%);
   width: 100%;
-}
-
-.swiper {
-  margin-left: 0 auto;
-  margin-right: auto;
 }
 
 .text-wrap {
@@ -632,4 +673,52 @@ legend {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.fp-wrap {
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.ele {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translateZ(0);
+}
+
+.imgBox {
+  position: relative;
+  background: url("/images/main/m/m_fp1_brand.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.imgBox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
+}
+
+.textBox {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #fff;
+}
+.textBox p {
+  font-size: 56px;
+}
+.textBox span {
+  font-size: 16px;
 }/*# sourceMappingURL=comm.css.map */
