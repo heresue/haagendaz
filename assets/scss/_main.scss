@@ -179,10 +179,11 @@
 }
 
 
+
 // fp-section
 .fp-wrap {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -195,74 +196,61 @@
   transform: translateZ(0);
 }
 
-.imgBox {
+.imgBox.brand {
   position: relative;
   background: url('/images/main/m/m_fp1_brand.jpg') no-repeat center center;
   background-size: cover;
   }
-  .imgBox::after {
-  content: '';
+.imgBox.quality {
+  position: relative;
+  background: url('/images/main/m/m_fp2_quality.jpg') no-repeat center center;
+  background-size: cover;
+  }
+.imgBox.contact {
+  position: relative;
+  background: url('/images/main/m/m_fp3_contact.jpg') no-repeat center center;
+  background-size: cover;
+  }
+.imgBox::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: #000;
+opacity: 0.3;
+}
+.imgBox.contact::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: $white;
+opacity: 0.3;
+}
+
+
+.textBox {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  opacity: 0.3;
+  top: 40%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $white;
+  p {
+    font-size: 56px;
   }
-  .textBox {
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: $white;
-    p {
-      font-size: 56px;
-    }
-    span {
-      font-size: 16px;
-    }
+  span {
+    font-size: 16px;
   }
+}
 
-
-
-// #fullpage {
-//   height: 100%;
-//     position: relative;
-//     touch-action: none;
-//     // transform: translate3d(0px, -6452px, 0px);
-//     transition: all 1000ms ease 0s;
-// }
-
-// .fp-section.fp-table {
-//   height: 100vh;
-//     position: relative;
-//     display: table;
-//     table-layout: fixed;
-//     width: 100%;
-// }
-// .fp-tableCell {
-//   display: table-cell;
-//   vertical-align: top;
-//   width: 100%;
-//   height: 100vh;
-// }
-
-// .imgbox {
-//   width: 100%;
-//   height: 100%;
-//   overflow: hidden;
-// }
-
-// .imgbox > div {
-//   width: 100%;
-//   height: 100%;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-//   transform: translateY(-50%);
-//   transition: 1s transform;
-//   background-image: url(/images/main/m/m_fp1_brand.jpg);
-// }
+.textBox.contact {
+  p, span {
+    color: $black;
+  }
+}

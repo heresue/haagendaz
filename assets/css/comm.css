@@ -677,7 +677,7 @@ legend {
 
 .fp-wrap {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -690,9 +690,21 @@ legend {
   transform: translateZ(0);
 }
 
-.imgBox {
+.imgBox.brand {
   position: relative;
   background: url("/images/main/m/m_fp1_brand.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.imgBox.quality {
+  position: relative;
+  background: url("/images/main/m/m_fp2_quality.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.imgBox.contact {
+  position: relative;
+  background: url("/images/main/m/m_fp3_contact.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -704,6 +716,17 @@ legend {
   right: 0;
   bottom: 0;
   background: #000;
+  opacity: 0.3;
+}
+
+.imgBox.contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
   opacity: 0.3;
 }
 
@@ -721,4 +744,8 @@ legend {
 }
 .textBox span {
   font-size: 16px;
+}
+
+.textBox.contact p, .textBox.contact span {
+  color: #000;
 }/*# sourceMappingURL=comm.css.map */

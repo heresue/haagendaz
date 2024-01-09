@@ -43,7 +43,7 @@ var swiper = new Swiper(".swiperBest", {
 // fp-section
 // 윈도우에 스크롤 이벤트를 걸어줌
 window.addEventListener("scroll", function () {
-  const section = document.querySelectorAll(".fp-section");
+  const section = document.querySelectorAll(".fp-wrap");
 
   section.forEach(function (section) {
       let bounds = section.getBoundingClientRect();
