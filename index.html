@@ -43,10 +43,7 @@
     rel="stylesheet"
     />
     <!-- symbols -->
-    <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
-    />
+
 
     <!-- swiper -->
     <!-- 링크를 위로 -->
@@ -66,6 +63,8 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"/>
 
+    <!-- jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
     <!-- 내꺼 제일아래 -->
     <link rel="stylesheet" href="./assets/css/comm.css">
@@ -84,16 +83,16 @@
                 <h1 id="logo">
                 <!-- 로고가 가운데에 위치하는 경우에도 logo먼저 적어준다(bcs웹접근성(먼저읽어줘야하니까)) -->
                     <a href="/">
-                        <!-- <img src="./images/common/logo_bgd.png" alt="로고 버건디"> -->
-                        <img src="./images/common/logo_wt_letter.png" alt="로고 화이트">
                     </a>
                 </h1>
                 <div class="col-right">
                     <!-- gnb -->
                     <div class="gnb-wrap">
                         <!-- 동적처리가 가능한 부분이기에 카멜표기법으로(gnbNav) -->
-                        <input type="checkbox" checked id="gnbNav" class="inp-burger">
+                        <input type="checkbox" id="gnbNav" class="inp-burger">
+                        <!-- id 앞에 checked 붙이면 체크된상태로 시작 -->
                         <!-- input&label > id, for값 동일해야함-->
+                        
                         <label for="gnbNav" class="label-burger">
                             <span class="bar"></span>
                             <span class="bar"></span>
@@ -231,8 +230,8 @@
 
             </section>
 
-            <section class="section">
-                <div class="video_wrap">
+            <section class="ytb-section">
+                <div class="ytb_wrap">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/hOGObbGY6FU?si=St7uPtI5rhSuFgr_&amp;controls=0&autoplay=1&mute=1&loop=1&showinfo=0&cc_load_policy=0&iv_load_policy=3&autohide=1&playsinline=1&playlist=hOGObbGY6FU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </section>

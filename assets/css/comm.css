@@ -314,48 +314,48 @@ legend {
 }
 
 #header {
+  position: absolute;
   width: 100%;
   height: 62px;
   background-color: transparent;
-  position: absolute;
   z-index: 10000;
 }
-#header .header-fix {
+
+.header-fix {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
+  position: absolute;
   width: 100%;
   padding: 0 var(--layout-padding);
-  height: 100%;
+  height: 62px;
   margin: 0;
+  transition: all 0.3s;
 }
-#header .header-fix #logo {
+.header-fix #logo {
   width: 100%;
   text-align: center;
-  padding: 20px 0 0 0;
+  padding-top: 20px;
 }
-#header .header-fix #logo a {
+.header-fix #logo a {
   display: inline-block;
-  width: 116px;
+  width: 125px;
+  height: 100%;
+  background: url(/images/common/logo_wt_letter.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-#header .header-fix #logo a img {
-  width: 100%;
-}
-#header .header-fix .btn-search {
-  position: absolute;
+.header-fix .btn-search {
+  position: relative;
   width: 20px;
   height: 20px;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-16px, 20px);
 }
-#header .header-fix .btn-search::after {
+.header-fix .btn-search::after {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
   background-image: url(/images/common/icon_search_wt.png);
+  transition: all 0.3s;
 }
 
 .gnb-wrap .inp-burger {
@@ -398,8 +398,33 @@ legend {
   width: 20px;
   height: 1px;
   border-radius: 1px;
-  background-color: white;
+  background: white;
   transition: all 0.3s;
+}
+
+#header.sticky .header-fix {
+  position: fixed;
+  top: 0;
+  height: 62px;
+  background: #fff;
+  transition: all 0.3s;
+}
+#header.sticky .header-fix #logo a {
+  display: inline-block;
+  background: url(/images/common/logo_bgd_letter.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#header.sticky .header-fix .btn-search {
+  width: 20px;
+  height: 20px;
+  transform: translate(-16px, 20px);
+}
+#header.sticky .header-fix .btn-search::after {
+  background-image: url(/images/common/icon_search_bk.png);
+}
+#header.sticky .header-fix .label-burger .bar {
+  background: black;
 }
 
 #footer {
@@ -659,15 +684,22 @@ legend {
   text-decoration: line-through;
 }
 
-.video_wrap {
-  -webkit-clip-path: inset(0%);
-          clip-path: inset(0%);
+.ytb_wrap {
+  -webkit-clip-path: inset(20%);
+          clip-path: inset(20%);
   pointer-events: none;
   position: relative;
-  height: 0;
+  width: 100vw;
+  height: 100%;
+  padding-bottom: 56.25%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 56.25%;
 }
-.video_wrap iframe {
+.ytb_wrap iframe {
   position: absolute;
   top: 0;
   left: 0;

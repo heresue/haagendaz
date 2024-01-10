@@ -1,6 +1,9 @@
 @import 'variables', 'mixins', 'fonts', 'reset';
 
 // layout
+
+
+
 .wrap {
     display: flex;
     flex-direction: column;
@@ -8,6 +11,7 @@
     // 타블렛 버전을 할거면 max-width&media screen .wrap 설정할 필요 없을듯 (포트폴리오에 m/w을 명확하게 보여주기 위해 (ex 카카오)
     max-width: 100%;
     margin: 0 auto;
+    
 }
 @media screen and (min-width: 420px) {
     .wrap {
@@ -20,6 +24,7 @@
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 #main {
     // min-height: calc(100vh -$hdH -$ftH);
@@ -42,60 +47,76 @@
 
 // header
 #header {
+    position: absolute;
     width: 100%;
     height: $hdH;
     background-color: transparent;
-    position: absolute;
     z-index: 10000;
-    .header-fix {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        position: relative;
+    
+}
+.header-fix {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    padding: 0 var(--layout-padding);
+    height: $hdH;
+    margin: 0;
+    transition: all 0.3s;
+    #logo {
         width: 100%;
-        padding: 0 var(--layout-padding);
-        height: 100%;
-        margin: 0;
-        #logo {
-            width: 100%;
-            text-align: center;
-            padding: 20px 0 0 0;
-            a {
-                display: inline-block;
-                width: 116px;
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        // #gnb {
-        //     padding-top: 20px;
-        //     .cate-list {
-        //         display: flex;
-        //         li {
-        //             display: flex;
-        //             align-items: center;
-        //             padding: 0 15px;
-        //         }
-        //     }
-        // }
-        .btn-search {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .btn-search::after {
-            content: "";
-            display: block;
-            width: 20px;
-            height: 20px;
-            background-image: url(/images/common/icon_search_wt.png);
+        text-align: center;
+        padding-top: 20px;
+        a {
+            display: inline-block;
+            width: 125px;
+            height: 100%;
+            background: url(/images/common/logo_wt_letter.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            // a::after {
+            //     content: backround-imge;
+            //     width: 100%;
+            //     background-image: url(/images/common/logo_wt_letter.png);
+            // }
+            // img {
+            //     position: relative;
+            //     width: 100%;
+            // }
         }
     }
+    // #gnb {
+    //     padding-top: 20px;
+    //     .cate-list {
+    //         display: flex;
+    //         li {
+    //             display: flex;
+    //             align-items: center;
+    //             padding: 0 15px;
+    //         }
+    //     }
+    // }
+    .btn-search {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        transform: translate(-16px, 20px);
+    }
+    .btn-search::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(/images/common/icon_search_wt.png);
+        transition: all 0.3s;
+    }
 }
+
+
+
+
+
+
 
 .gnb-wrap {
     .inp-burger {
@@ -153,11 +174,44 @@
             width: 20px;
             height: 1px;
             border-radius: 1px;
-            background-color: white;
+            background: white;
             transition: all 0.3s;
         }
     }
 }
+
+
+// 스크롤 시 sticky 헤더
+#header.sticky {
+    .header-fix {
+        // 헤더 고정
+        position: fixed;
+        top: 0;
+        height: $hdH;
+        background: $white;
+        transition: all 0.3s;
+        #logo a {
+                display: inline-block;
+                background: url(/images/common/logo_bgd_letter.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+        }
+        .btn-search {
+            width: 20px;
+            height: 20px;
+            transform: translate(-16px, 20px);
+        }
+        .btn-search::after {
+            background-image: url(/images/common/icon_search_bk.png);
+        }
+
+        .label-burger .bar {
+            background: black;
+        }
+
+    }
+}
+
 
 // footer
 
