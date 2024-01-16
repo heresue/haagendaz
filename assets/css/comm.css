@@ -358,8 +358,18 @@ legend {
   transition: all 0.3s;
 }
 
-.gnb-wrap .inp-burger {
+.col-right {
   position: absolute;
+}
+
+.gnb-wrap #gnb {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: white;
+  left: -100%;
+}
+.gnb-wrap .inp-burger {
   top: 0;
   left: 0;
   width: 0;
@@ -388,8 +398,8 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70px;
-  height: 70px;
+  width: 20px;
+  height: 100%;
   cursor: pointer;
 }
 .gnb-wrap .label-burger .bar {

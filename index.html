@@ -66,6 +66,8 @@
     <!-- jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
+
+
     <!-- 내꺼 제일아래 -->
     <link rel="stylesheet" href="./assets/css/comm.css">
     <script defer src="./assets/js/comm.js"></script>
@@ -89,7 +91,7 @@
                     <!-- gnb -->
                     <div class="gnb-wrap">
                         <!-- 동적처리가 가능한 부분이기에 카멜표기법으로(gnbNav) -->
-                        <input type="checkbox" id="gnbNav" class="inp-burger">
+                        <input type="checkbox" checked id="gnbNav" class="inp-burger">
                         <!-- id 앞에 checked 붙이면 체크된상태로 시작 -->
                         <!-- input&label > id, for값 동일해야함-->
                         
@@ -99,12 +101,11 @@
                             <span class="bar"></span>
                             <div class="blind">전체 메뉴 보기</div>
                         </label>
-                        <nav id="gnb" class="blind">전체메뉴</nav>
+                        <nav id="gnb" class="blind">전체메뉴
+                            <div class="cate_list">Brand</div>
+                        </nav>
                     </div>
                 </div>
-                <!-- <div class="search">
-                    <a href="#">검색</a>
-                </div> -->
                 <button class="btn-search">
                     <span class="blind">검색</span>
                 </button>
