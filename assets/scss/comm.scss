@@ -1,9 +1,7 @@
 @import 'variables', 'mixins', 'fonts', 'reset';
 
+
 // layout
-
-
-
 .wrap {
     display: flex;
     flex-direction: column;
@@ -73,29 +71,8 @@
             background: url(/images/common/logo_wt_letter.png);
             background-size: contain;
             background-repeat: no-repeat;
-
-            // a::after {
-            //     content: backround-imge;
-            //     width: 100%;
-            //     background-image: url(/images/common/logo_wt_letter.png);
-            // }
-            // img {
-            //     position: relative;
-            //     width: 100%;
-            // }
         }
     }
-    // #gnb {
-    //     padding-top: 20px;
-    //     .cate-list {
-    //         display: flex;
-    //         li {
-    //             display: flex;
-    //             align-items: center;
-    //             padding: 0 15px;
-    //         }
-    //     }
-    // }
     .btn-search {
         position: relative;
         width: 20px;
@@ -116,19 +93,21 @@
 
 
 
-.col-right {
+.col-left {
     position: absolute;
 }
 
 .gnb-wrap {
     #gnb {
         display: flex;
-        width: 100px;
-        height: 100px;
-        background: white;
-        left: -100%;
-
-
+        width: 100vw;
+        height: 100vh;
+        background: gray;
+        // background: white;
+        position: absolute;
+        // left: -100vw;
+        top: 0;
+        transition: all 0.3s;
     }
     .inp-burger {
         // display none으로 날리면 안됨. 체크가 되어야하니까
@@ -139,7 +118,6 @@
         width: 0;
         height: 0;
         border: none;
-        
         opacity: 0;
         visibility: hidden;
         // input이 체크됐을 때
@@ -191,6 +169,18 @@
         }
     }
 }
+
+
+
+// 아코디언
+.accordion_wrap {
+    width: 100%;
+}
+
+
+
+
+
 
 
 // 스크롤 시 sticky 헤더

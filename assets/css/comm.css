@@ -358,16 +358,18 @@ legend {
   transition: all 0.3s;
 }
 
-.col-right {
+.col-left {
   position: absolute;
 }
 
 .gnb-wrap #gnb {
   display: flex;
-  width: 100px;
-  height: 100px;
-  background: white;
-  left: -100%;
+  width: 100vw;
+  height: 100vh;
+  background: gray;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
 }
 .gnb-wrap .inp-burger {
   top: 0;
@@ -410,6 +412,10 @@ legend {
   border-radius: 1px;
   background: white;
   transition: all 0.3s;
+}
+
+.accordion_wrap {
+  width: 100%;
 }
 
 #header.sticky .header-fix {

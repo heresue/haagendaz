@@ -48,6 +48,12 @@
 
 
 
+      
+
+// 아코디언
+
+
+
 // intro-section
 var swiper = new Swiper(".swiperIntro", {
   spaceBetween: 0,
@@ -204,3 +210,10 @@ titles.forEach((title) => {
   title.addEventListener("click", toggleAccordion);
 });
 
+const accordions = document.querySelectorAll(".accordion");
+accordions.forEach((accordion) => {
+  const titles = accordion.querySelectorAll(".title");
+  titles.forEach((title) => {
+    title.addEventListener("click", toggleAccordion);
+  });
+});
