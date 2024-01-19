@@ -149,12 +149,15 @@ body {
 
 a {
   text-decoration: none;
+  color: $txtDefult;
 
   &:active,
   &:hover {
     text-decoration: none;
   }
 }
+
+
 
 address,
 caption,

@@ -1,3 +1,50 @@
+// menu accordion
+
+// 아코디언이 하나만 있는 경우
+// const accordion = document.querySelector(".accordion");
+
+// function toggleAccordion() {
+//   const clickedItem = this.parentNode;
+//   const items = accordion.querySelectorAll("li");
+
+//   items.forEach((item) => {
+//     if (clickedItem === item) {
+//       item.classList.toggle("on");
+//     } else {
+//       item.classList.remove("on");
+//     }
+//   });
+// }
+
+// const titles = accordion.querySelectorAll(".title");
+// titles.forEach((title) => {
+//   title.addEventListener("click", toggleAccordion);
+// });
+
+
+// 아코디언이 여러개 있는 경우
+const accordions = document.querySelectorAll(".accordion");
+
+function toggleAccordion() {
+  const clickedItem = this.parentNode;
+  const items = clickedItem.parentNode.querySelectorAll("li");
+
+  items.forEach((item) => {
+    if (clickedItem === item) {
+      item.classList.toggle("on");
+    } else {
+      item.classList.remove("on");
+    }
+  });
+}
+
+accordions.forEach((accordion) => {
+  const titles = accordion.querySelectorAll(".title");
+  titles.forEach((title) => {
+    title.addEventListener("click", toggleAccordion);
+  });
+});
+
 
 
 // header
@@ -45,13 +92,6 @@
               $window.trigger("scroll")
           })
       })
-
-
-
-      
-
-// 아코디언
-
 
 
 // intro-section
@@ -190,30 +230,7 @@ window.addEventListener("scroll", function () {
 
 
 // footer
-// menu
-const accordion = document.querySelector(".accordion");
-function toggleAccordion() {
-  const clickedItem = this.parentNode;
-  const items = accordion.querySelectorAll("li");
 
-  items.forEach((item) => {
-    if (clickedItem === item) {
-      item.classList.toggle("on");
-    } else {
-      item.classList.remove("on");
-    }
-  });
-}
 
-const titles = accordion.querySelectorAll(".title");
-titles.forEach((title) => {
-  title.addEventListener("click", toggleAccordion);
-});
 
-const accordions = document.querySelectorAll(".accordion");
-accordions.forEach((accordion) => {
-  const titles = accordion.querySelectorAll(".title");
-  titles.forEach((title) => {
-    title.addEventListener("click", toggleAccordion);
-  });
-});
+

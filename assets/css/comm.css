@@ -145,7 +145,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
-  color: #202020;
+  color: black;
 }
 
 /* desktop */
@@ -157,6 +157,7 @@ body {
 /* color값은 디자인가이드에 맞게사용 */
 a {
   text-decoration: none;
+  color: black;
 }
 a:active, a:hover {
   text-decoration: none;
@@ -358,20 +359,56 @@ legend {
   transition: all 0.3s;
 }
 
-.col-left {
-  position: absolute;
-}
-
 .gnb-wrap #gnb {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: gray;
   position: absolute;
+  left: -100vw;
   top: 0;
-  transition: all 0.3s;
+  transition: all 0.5s;
+}
+.gnb-wrap #gnb ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gnb-wrap #gnb li {
+  display: block;
+}
+.gnb-wrap #gnb .gnb-inner {
+  width: 100%;
+}
+.gnb-wrap #gnb .accordion ul > li {
+  overflow: hidden;
+  max-height: 40px;
+  margin: 30px 0;
+}
+.gnb-wrap #gnb .accordion ul > li.on {
+  max-height: 600px;
+  transition: all 0.5s ease-in-out;
+}
+.gnb-wrap #gnb .accordion ul > li.on img {
+  rotate: -180deg;
+}
+.gnb-wrap #gnb .accordion ul > li .title {
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gnb-wrap #gnb .accordion ul > li .title img {
+  width: 16px;
+}
+.gnb-wrap #gnb .accordion ul > li .desc {
+  display: block;
+  padding: 16px;
+  font-size: 16px;
 }
 .gnb-wrap .inp-burger {
+  position: absolute;
   top: 0;
   left: 0;
   width: 0;
@@ -380,17 +417,19 @@ legend {
   opacity: 0;
   visibility: hidden;
 }
-.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
+.gnb-wrap .inp-burger:checked + .label-burger .bar {
+  background: black;
 }
 .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(2) {
-  display: none;
+  transform: rotate(45deg);
 }
 .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(3) {
-  transform: translateY(-3px) rotate(-45deg);
+  display: none;
+}
+.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(4) {
+  transform: rotate(-45deg) translateY(-1px);
 }
 .gnb-wrap .inp-burger:checked ~ #gnb {
-  display: flex;
   left: 0;
 }
 .gnb-wrap .label-burger {
@@ -400,22 +439,19 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 20px;
   height: 100%;
   cursor: pointer;
 }
 .gnb-wrap .label-burger .bar {
   display: block;
-  margin-bottom: 7px;
   width: 20px;
   height: 1px;
   border-radius: 1px;
   background: white;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
-
-.accordion_wrap {
-  width: 100%;
+.gnb-wrap .label-burger span:nth-child(3) {
+  margin: 5px 0;
 }
 
 #header.sticky .header-fix {
@@ -475,6 +511,9 @@ legend {
   margin: 0;
 }
 
+#footer a {
+  color: white;
+}
 #footer .accordion ul > li {
   overflow: hidden;
   max-height: 40px;
