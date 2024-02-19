@@ -1,5 +1,5 @@
-// intro-section
-#intro-section {
+// slide-section
+.slide-section {
   // 타블렛 버전을 할거면 max-width&media screen .wrap 설정할 필요 없을듯 (포트폴리오에 m/w을 명확하게 보여주기 위해 (ex 카카오)
   // max-width: 420px;
   // height: 100vh;
@@ -7,7 +7,7 @@
 }
 @media screen and (min-width: 1280px) {
   .intro-section {
-      max-width: none;
+    max-width: none;
   }
 }
 
@@ -63,10 +63,10 @@
     border-radius: 1px;
     background-color: white;
     &:nth-child(1) {
-    transform:  translateY(5px) rotate(45deg);
+      transform: translateY(5px) rotate(45deg);
     }
     &:nth-child(2) {
-    transform: translateY(-3px) rotate(-45deg);
+      transform: translateY(-3px) rotate(-45deg);
     }
   }
 }
@@ -84,30 +84,29 @@
   background-repeat: no-repeat;
 }
 
-
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   color: #eee;
   font-weight: light;
 }
 
-
 // best-section
 .best-section {
-    display: block;
-    color: #000;
-    margin: 130px 0;
-    padding: 0 16px;
-    .swiper {
-      width: 100%;
-      height: 383px;
-    }
-    .swiper-scrollbar-horizontal {
-      height: 2px;
-      background: #f1f1f1;
-    }
-    .swiper-scrollbar-drag {
-      background: #333;
-    }
+  display: block;
+  color: #000;
+  margin: 130px 0;
+  padding: 0 16px;
+  .swiper {
+    width: 100%;
+    height: 383px;
+  }
+  .swiper-scrollbar-horizontal {
+    height: 2px;
+    background: #f1f1f1;
+  }
+  .swiper-scrollbar-drag {
+    background: #333;
+  }
 }
 
 .pdtBox {
@@ -116,7 +115,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-   .thumb {
+  .thumb {
     width: 100%;
     height: 244px;
     img {
@@ -125,7 +124,7 @@
       height: 100%;
       object-fit: cover;
     }
-   }
+  }
   .info {
     width: 100%;
     padding: 15px 0;
@@ -153,13 +152,11 @@
         font-weight: 400;
         color: #cacaca;
         padding-right: 2px;
-        text-decoration: line-through
+        text-decoration: line-through;
       }
     }
   }
 }
-
-
 
 // video
 .ytb_wrap {
@@ -167,15 +164,14 @@
   pointer-events: none;
   position: relative;
   width: 100vw;
-	height: 100%;
-	padding-bottom: 56.25%;
+  height: 100%;
+  padding-bottom: 56.25%;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-	padding-bottom: 56.25%;
-
+  padding-bottom: 56.25%;
 
   iframe {
     position: absolute;
@@ -186,10 +182,8 @@
   }
 }
 
-
-
-// fp-section
-.fp-wrap {
+// intro-section
+.intro-wrap {
   position: relative;
   overflow: hidden;
   height: 100vh;
@@ -206,40 +200,39 @@
 
 .imgBox.brand {
   position: relative;
-  background: url('/images/main/m/m_fp1_brand.jpg') no-repeat center center;
+  background: url("/images/main/m/m_fp1_brand.jpg") no-repeat center center;
   background-size: cover;
-  }
+}
 .imgBox.quality {
   position: relative;
-  background: url('/images/main/m/m_fp2_quality.jpg') no-repeat center center;
+  background: url("/images/main/m/m_fp2_quality.jpg") no-repeat center center;
   background-size: cover;
-  }
+}
 .imgBox.contact {
   position: relative;
-  background: url('/images/main/m/m_fp3_contact.jpg') no-repeat center center;
+  background: url("/images/main/m/m_fp3_contact.jpg") no-repeat center center;
   background-size: cover;
-  }
+}
 .imgBox::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: #000;
-opacity: 0.3;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
 }
 .imgBox.contact::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: $white;
-opacity: 0.3;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $white;
+  opacity: 0.3;
 }
-
 
 .textBox {
   position: absolute;
@@ -258,7 +251,8 @@ opacity: 0.3;
 }
 
 .textBox.contact {
-  p, span {
+  p,
+  span {
     color: $black;
   }
 }
