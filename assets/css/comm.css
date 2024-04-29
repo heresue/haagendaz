@@ -157,11 +157,7 @@ body {
 /* color값은 디자인가이드에 맞게사용 */
 a {
   text-decoration: none;
-<<<<<<< HEAD
-  color: #fff;
-=======
   color: black;
->>>>>>> 41dae443608f995097ff434b895656f12d920f1a
 }
 a:active, a:hover {
   text-decoration: none;
@@ -348,13 +344,15 @@ legend {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.header-fix .btn-search {
+
+.btn-search {
   position: relative;
   width: 20px;
   height: 20px;
   transform: translate(-16px, 20px);
 }
-.header-fix .btn-search::after {
+
+.btn-search::after {
   content: "";
   display: block;
   width: 20px;
@@ -363,7 +361,58 @@ legend {
   transition: all 0.3s;
 }
 
+.gnb-wrap .inp-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(2) {
+  display: none;
+}
+.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(3) {
+  transform: translateY(-3px) rotate(-45deg);
+}
+.gnb-wrap .inp-burger:checked ~ #gnb {
+  display: flex;
+  right: 0;
+}
+.gnb-wrap .label-burger {
+  position: absolute;
+  left: 16px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+}
+.gnb-wrap .label-burger .bar {
+  display: block;
+  margin-bottom: 7px;
+  width: 20px;
+  height: 1px;
+  border-radius: 1px;
+  background: white;
+  transition: all 0.3s;
+}
 .gnb-wrap #gnb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: black;
+  transform-origin: 0 0;
+  transform: translate(-100% 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.gnb-wrap #gnb #gnb {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -373,32 +422,32 @@ legend {
   top: 0;
   transition: all 0.5s;
 }
-.gnb-wrap .gnb-inner {
+.gnb-wrap #gnb .gnb-inner {
   width: 100%;
 }
-.gnb-wrap .accordion ul > li {
+.gnb-wrap #gnb .accordion ul > li {
   overflow: hidden;
   max-height: 40px;
   margin: 30px 0;
 }
-.gnb-wrap .accordion ul > li.on {
+.gnb-wrap #gnb .accordion ul > li.on {
   max-height: 600px;
   transition: all 0.5s ease-in-out;
 }
-.gnb-wrap .accordion ul > li.on img {
+.gnb-wrap #gnb .accordion ul > li.on img {
   rotate: -180deg;
 }
-.gnb-wrap .accordion ul > li .title {
+.gnb-wrap #gnb .accordion ul > li .title {
   height: 40px;
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.gnb-wrap .accordion ul > li .title img {
+.gnb-wrap #gnb .accordion ul > li .title img {
   width: 16px;
 }
-.gnb-wrap .accordion ul > li .desc {
+.gnb-wrap #gnb .accordion ul > li .desc {
   display: block;
   padding: 16px;
   font-size: 16px;
@@ -426,17 +475,13 @@ legend {
 .inp-burger:checked + .label-burger .bar:nth-child(4) {
   transform: rotate(-45deg) translateY(-1px);
 }
-<<<<<<< HEAD
-.gnb-wrap .inp-burger:checked ~ #gnb {
-  display: flex;
-  right: 0;
-=======
-.inp-burger:checked ~ #gnb {
-  left: 0;
->>>>>>> 41dae443608f995097ff434b895656f12d920f1a
+.inp-burger:checked #gnb input:checked ~ ul {
+  transform: none;
 }
-
-.label-burger {
+.inp-burger:checked #gnb input:checked ~ ul ~ #gnb {
+  left: 0;
+}
+.inp-burger .label-burger {
   position: absolute;
   left: 16px;
   z-index: 1100;
@@ -446,7 +491,7 @@ legend {
   height: 100%;
   cursor: pointer;
 }
-.label-burger .bar {
+.inp-burger .label-burger .bar {
   display: block;
   width: 20px;
   height: 1px;
@@ -454,21 +499,8 @@ legend {
   background: white;
   transition: all 0.5s;
 }
-.label-burger span:nth-child(3) {
+.inp-burger .label-burger span:nth-child(3) {
   margin: 5px 0;
-}
-.gnb-wrap #gnb {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: black;
-  transform-origin: 0 0;
-  transform: translate(-100% 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-
-#gnb input:checked ~ ul {
-  transform: none;
 }
 
 #header.sticky .header-fix {
@@ -780,13 +812,12 @@ legend {
   height: 100%;
 }
 
-.intro-wrap {
+.fp-wrap {
   position: relative;
   overflow: hidden;
   height: 100vh;
 }
-
-.ele {
+.fp-wrap .ele {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -794,26 +825,22 @@ legend {
   top: 0;
   transform: translateZ(0);
 }
-
-.imgBox.brand {
+.fp-wrap .imgBox.brand {
   position: relative;
   background: url("/images/main/m/m_fp1_brand.jpg") no-repeat center center;
   background-size: cover;
 }
-
-.imgBox.quality {
+.fp-wrap .imgBox.quality {
   position: relative;
   background: url("/images/main/m/m_fp2_quality.jpg") no-repeat center center;
   background-size: cover;
 }
-
-.imgBox.contact {
+.fp-wrap .imgBox.contact {
   position: relative;
   background: url("/images/main/m/m_fp3_contact.jpg") no-repeat center center;
   background-size: cover;
 }
-
-.imgBox::after {
+.fp-wrap .imgBox::after {
   content: "";
   position: absolute;
   top: 0;
@@ -823,8 +850,7 @@ legend {
   background: #000;
   opacity: 0.3;
 }
-
-.imgBox.contact::after {
+.fp-wrap .imgBox.contact::after {
   content: "";
   position: absolute;
   top: 0;
@@ -834,8 +860,7 @@ legend {
   background: #fff;
   opacity: 0.3;
 }
-
-.textBox {
+.fp-wrap .textBox {
   position: absolute;
   top: 40%;
   left: 10%;
@@ -844,14 +869,13 @@ legend {
   width: 100%;
   color: #fff;
 }
-.textBox p {
+.fp-wrap .textBox p {
   font-size: 56px;
 }
-.textBox span {
+.fp-wrap .textBox span {
   font-size: 16px;
 }
-
-.textBox.contact p,
-.textBox.contact span {
+.fp-wrap .textBox.contact p,
+.fp-wrap .textBox.contact span {
   color: #000;
 }/*# sourceMappingURL=comm.css.map */
