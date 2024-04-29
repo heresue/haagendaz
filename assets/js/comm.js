@@ -1,3 +1,52 @@
+// menu accordion
+
+// 아코디언이 하나만 있는 경우
+// const accordion = document.querySelector(".accordion");
+
+// function toggleAccordion() {
+//   const clickedItem = this.parentNode;
+//   const items = accordion.querySelectorAll("li");
+
+//   items.forEach((item) => {
+//     if (clickedItem === item) {
+//       item.classList.toggle("on");
+//     } else {
+//       item.classList.remove("on");
+//     }
+//   });
+// }
+
+// const titles = accordion.querySelectorAll(".title");
+// titles.forEach((title) => {
+//   title.addEventListener("click", toggleAccordion);
+// });
+
+
+// 아코디언이 여러개 있는 경우
+const accordions = document.querySelectorAll(".accordion");
+
+function toggleAccordion() {
+  const clickedItem = this.parentNode;
+  const items = clickedItem.parentNode.querySelectorAll("li");
+
+  items.forEach((item) => {
+    if (clickedItem === item) {
+      item.classList.toggle("on");
+    } else {
+      item.classList.remove("on");
+    }
+  });
+}
+
+accordions.forEach((accordion) => {
+  const titles = accordion.querySelectorAll(".title");
+  titles.forEach((title) => {
+    title.addEventListener("click", toggleAccordion);
+  });
+});
+
+
+
 // header
 // 준비이벤트 (위에 넣어줄 때는 준비이벤트를 넣어줘야 읽힘)
 $(function () {
@@ -25,24 +74,26 @@ $(function () {
       const $scrolled = $window.scrollTop();
       // console.log("윈도우의 스크롤 값 : " + $scrolled)
 
-      // 윈도우의 스크롤 값이 header의 위치값보다 커졌을 때
-      if ($scrolled > headerOffsetTop) {
-        // 참일 경우
-        // header에 .sticky 추가
-        $header.addClass("sticky");
-        // $header.addClass('sticky') 대신 gsap 넣어도 된다
-      } else {
-        // 거짓일 경우
-        // header에 .sticky 제거
-        $header.removeClass("sticky");
-      }
-    });
+                  // 윈도우의 스크롤 값이 header의 위치값보다 커졌을 때
+                  if ($scrolled > headerOffsetTop) {
+                      // 참일 경우
+                      // header에 .sticky 추가
+                      $header.addClass('sticky')
+                      // $header.addClass('sticky') 대신 gsap 넣어도 된다
+                  }else {
+                      // 거짓일 경우
+                      // header에 .sticky 제거
+                      $header.removeClass('sticky')
+                  }
+              })
+              
+              // trigger: 스크롤 이벤트를 강제로 발생시키는 역할
+              //      이미 발생한 것 같이 보여줌 (새로고침했을때 sticky가 계속 적용되어 있음)
+              $window.trigger("scroll")
+          })
+      })
 
-    // trigger: 스크롤 이벤트를 강제로 발생시키는 역할
-    //      이미 발생한 것 같이 보여줌 (새로고침했을때 sticky가 계속 적용되어 있음)
-    $window.trigger("scroll");
-  });
-});
+
 
 // intro-section
 var swiper = new Swiper(".swiperIntro", {
@@ -148,3 +199,4 @@ const titles = accordion.querySelectorAll(".title");
 titles.forEach((title) => {
   title.addEventListener("click", toggleAccordion);
 });
+

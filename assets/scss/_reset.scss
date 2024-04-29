@@ -150,13 +150,19 @@ body {
 
 a {
   text-decoration: none;
+<<<<<<< HEAD
   color: #fff;
+=======
+  color: $txtDefult;
+>>>>>>> 41dae443608f995097ff434b895656f12d920f1a
 
   &:active,
   &:hover {
     text-decoration: none;
   }
 }
+
+
 
 address,
 caption,

@@ -1,5 +1,5 @@
-// intro-section
-#intro-section {
+// slide-section
+.slide-section {
   // 타블렛 버전을 할거면 max-width&media screen .wrap 설정할 필요 없을듯 (포트폴리오에 m/w을 명확하게 보여주기 위해 (ex 카카오)
   // max-width: 420px;
   // height: 100vh;
@@ -182,8 +182,13 @@
   }
 }
 
+<<<<<<< HEAD
 // fp-section
 .fp-wrap {
+=======
+// intro-section
+.intro-wrap {
+>>>>>>> 41dae443608f995097ff434b895656f12d920f1a
   position: relative;
   overflow: hidden;
   height: 100vh;
