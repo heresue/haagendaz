@@ -145,7 +145,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
-  color: #202020;
+  color: black;
 }
 
 /* desktop */
@@ -157,6 +157,7 @@ body {
 /* color값은 디자인가이드에 맞게사용 */
 a {
   text-decoration: none;
+  color: #fff;
 }
 a:active, a:hover {
   text-decoration: none;
@@ -379,7 +380,7 @@ legend {
 }
 .gnb-wrap .inp-burger:checked ~ #gnb {
   display: flex;
-  left: 0;
+  right: 0;
 }
 .gnb-wrap .label-burger {
   position: absolute;
@@ -388,8 +389,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70px;
-  height: 70px;
+  height: 100%;
   cursor: pointer;
 }
 .gnb-wrap .label-burger .bar {
@@ -400,6 +400,19 @@ legend {
   border-radius: 1px;
   background: white;
   transition: all 0.3s;
+}
+.gnb-wrap #gnb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: black;
+  transform-origin: 0 0;
+  transform: translate(-100% 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#gnb input:checked ~ ul {
+  transform: none;
 }
 
 #header.sticky .header-fix {
@@ -611,7 +624,8 @@ legend {
   background-repeat: no-repeat;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   color: #eee;
   font-weight: light;
 }
@@ -693,7 +707,7 @@ legend {
   height: 100%;
   padding-bottom: 56.25%;
   top: 0;
-  left: 0;
+  left: -8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -778,6 +792,7 @@ legend {
   font-size: 16px;
 }
 
-.textBox.contact p, .textBox.contact span {
+.textBox.contact p,
+.textBox.contact span {
   color: #000;
 }/*# sourceMappingURL=comm.css.map */

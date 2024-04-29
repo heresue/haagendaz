@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mainㅣHaagendaz</title>
 
     <!-- 오픈그래프 -->
@@ -10,18 +10,21 @@
     <meta property="og:title" content="페이지 제목" />
     <meta property="og:description" content="페이지 설명" />
     <meta
-    property="og:image"
-    content="http://www.mysite.com/article/article1_featured_image.jpg"
+      property="og:image"
+      content="http://www.mysite.com/article/article1_featured_image.jpg"
     />
-    <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+    <meta
+      property="og:url"
+      content="http://www.mysite.com/article/article1.html"
+    />
 
     <!-- 트위터 카드 -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="페이지 제목" />
     <meta name="twitter:description" content="페이지 설명" />
     <meta
-    name="twitter:image"
-    content="http://www.mysite.com/article/article1.html"
+      name="twitter:image"
+      content="http://www.mysite.com/article/article1.html"
     />
     <meta name="twitter:domain" content="사이트 명" />
 
@@ -29,315 +32,402 @@
     <!--<link rel="shortcut icon" href="favicon.ico" />-->
     <link rel="icon" href="./favicon.png" />
     <!-- reset.css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
 
     <!-- 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Google Material Icons -->
     <!-- icons -->
     <link
-    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+      rel="stylesheet"
     />
     <!-- symbols -->
 
-
     <!-- swiper -->
     <!-- 링크를 위로 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
 
     <!-- cdn js (font-awesome)-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
     <!-- 내꺼 제일아래 -->
-    <link rel="stylesheet" href="./assets/css/comm.css">
+    <link rel="stylesheet" href="./assets/css/comm.css" />
     <script defer src="./assets/js/comm.js"></script>
-    
-    
-</head>
-<body>
+  </head>
+  <body>
     <div class="u-skip">
-        <a href="#gnb" class="blind">주메뉴 바로가기</a>
-        <a href="#main" class="blind">본문 바로가기</a>
+      <a href="#gnb" class="blind">주메뉴 바로가기</a>
+      <a href="#main" class="blind">본문 바로가기</a>
     </div>
     <div class="wrap">
-        <header id="header">
-            <div class="header-fix">
-                <h1 id="logo">
-                <!-- 로고가 가운데에 위치하는 경우에도 logo먼저 적어준다(bcs웹접근성(먼저읽어줘야하니까)) -->
-                    <a href="/">
-                    </a>
-                </h1>
-                <div class="col-right">
-                    <!-- gnb -->
-                    <div class="gnb-wrap">
-                        <!-- 동적처리가 가능한 부분이기에 카멜표기법으로(gnbNav) -->
-                        <input type="checkbox" id="gnbNav" class="inp-burger">
-                        <!-- id 앞에 checked 붙이면 체크된상태로 시작 -->
-                        <!-- input&label > id, for값 동일해야함-->
-                        
-                        <label for="gnbNav" class="label-burger">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <div class="blind">전체 메뉴 보기</div>
-                        </label>
-                        <nav id="gnb" class="blind">전체메뉴</nav>
-                    </div>
-                </div>
-                <!-- <div class="search">
-                    <a href="#">검색</a>
-                </div> -->
-                <button class="btn-search">
-                    <span class="blind">검색</span>
-                </button>
-        </div>
-        </header>
-        
-        <main id="main"> <span class="blind">main</span>
-            <section id="intro-section">
-                <!-- Swiper -->
-                <!-- Autoplay, infinite loop -->
-                <div class="swiper swiperIntro">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./images/main/m/m_slide1.jpg" alt="">
-                        <!-- ★★★★★★★★★★★★★★★★★ -->
-                        <div class="text-wrap">
-                            <div class="logo-hd"></div>
-                            <div class="cross">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                            </div>
-                            <div class="logo-ph"></div>
-                        </div>
-                    </div>
+      <header id="header">
+        <div class="header-fix">
+          <h1 id="logo">
+            <!-- 로고가 가운데에 위치하는 경우에도 logo먼저 적어준다(bcs웹접근성(먼저읽어줘야하니까)) -->
+            <a href="/"> </a>
+          </h1>
+          <div class="col-left">
+            <!-- gnb -->
+            <div class="gnb-wrap">
+              <!-- 동적처리가 가능한 부분이기에 카멜표기법으로(gnbNav) -->
+              <input type="checkbox" id="gnbNav" class="inp-burger" />
+              <!-- id 앞에 checked 붙이면 체크된상태로 시작 -->
+              <!-- input&label > id, for값 동일해야함-->
 
-                    <div class="swiper-slide">
-                        <img src="./images/main/m/m_slide2.jpg" alt="">
+              <label for="gnbNav" class="label-burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <div class="blind">전체메뉴 보기</div>
+              </label>
+              <nav id="gnb" class="blind">
+                전체메뉴
+                <ul id="gnb-content">
+                  <li>
+                    <div class="div">
+                      <strong>Brand</strong>
+                      <img src="/images/common/icon_more_bk.png" alt="" />
                     </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-                </div>
-            </section>
-
-            
-            <section class="best-section">
-                <!-- Swiper -->
-                <!-- slides per view auto -->
-                <div class="swiper swiperBest">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide pdtBox">
-                            <div class="thumb">
-                                <img src="./images/main/macaron_double_chocolate_fint.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="name">하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml</div>
-                                <div class="priceBox">
-                                    <strong class="price">15,500</strong>
-                                    <span class="sale">25%</span>
-                                    <span class="cost">31,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pdtBox">
-                            <div class="thumb">
-                                <img src="./images/main/macaron_strawberry_raspberry_fint.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="name">하겐다즈 마카롱 스트로베리&라즈베리 (파인트) 403ml</div>
-                                <div class="priceBox">
-                                    <strong class="price">15,500</strong>
-                                    <span class="sale"></span>
-                                    <span class="cost"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pdtBox">
-                            <div class="thumb">
-                                <img src="./images/main/macaron_double_chocolate_fint.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="name">하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml</div>
-                                <div class="priceBox">
-                                    <strong class="price">15,500</strong>
-                                    <span class="sale">25%</span>
-                                    <span class="cost">31,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pdtBox">
-                            <div class="thumb">
-                                <img src="./images/main/macaron_double_chocolate_fint.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="name">하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml</div>
-                                <div class="priceBox">
-                                    <strong class="price">15,500</strong>
-                                    <span class="sale">25%</span>
-                                    <span class="cost">31,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pdtBox">
-                            <div class="thumb">
-                                <img src="./images/main/macaron_double_chocolate_fint.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="name">하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml</div>
-                                <div class="priceBox">
-                                    <strong class="price">15,500</strong>
-                                    <span class="sale">25%</span>
-                                    <span class="cost">31,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pdtBox">
-                            <div class="thumb">
-                                <img src="./images/main/macaron_double_chocolate_fint.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="name">하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml</div>
-                                <div class="priceBox">
-                                    <strong class="price">15,500</strong>
-                                    <span class="sale">25%</span>
-                                    <span class="cost">31,000</span>
-                                </div>
-                            </div>
-                        </div>
+                    <a href="#">하겐다즈 스토리</a>
+                    <a href="#">품질좋은 원료</a>
+                  </li>
+                  <li>
+                    <strong>Product</strong>
+                  </li>
+                  <li>
+                    <strong><a href="#">Store</a></strong>
+                  </li>
+                  <li>
+                    <strong>Contact</strong>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Find Us</strong>
+                      <img src="/images/common/icon_more_bk.png" alt="" />
                     </div>
-                    <div class="swiper-scrollbar"></div>
-                  </div>
-
-            </section>
-
-            <section class="ytb-section">
-                <div class="ytb_wrap">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hOGObbGY6FU?si=St7uPtI5rhSuFgr_&amp;controls=0&autoplay=1&mute=1&loop=1&showinfo=0&cc_load_policy=0&iv_load_policy=3&autohide=1&playsinline=1&playlist=hOGObbGY6FU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </section>
-
-
-            <section class="fp-section">
-                <div class="fp-wrap">
-                    <div class="ele imgBox brand"></div>
-                    <div class="ele textBox brand">
-                        <p>BRAND</p>
-                        <span>비교할 수 없는 퀄리티의 아이스크림,
-                            <br>
-                            하겐다즈의 59년 역사를 확인해보세요.</span>
-                    </div>
-                </div>
-                <div class="fp-wrap">
-                    <div class="ele imgBox quality"></div>
-                    <div class="ele textBox quality">
-                        <p>QUALITY</p>
-                        <span>하겐다즈의 엄격한 원칙을 바탕으로 만든 아이스크림
-                            <br><br>
-                            그 시작과 끝은 고품질의 원료와
-                            <br>
-                            60년 넘게 이어져 온 철저한 장인정신 입니다.
-                        </span>
-                    </div>
-                </div>
-                <div class="fp-wrap">
-                    <div class="ele imgBox contact"></div>
-                    <div class="ele textBox contact">
-                        <p>CONTACT</p>
-                        <span>고객과 오너에게 가장 탁월한 선택
-                            <br>
-                            하겐다즈가 제공하는 맞춤형 비즈니스 솔루션을 경험해보세요.</span>
-                    </div>
-                </div>
-            </section>
-        </div>
-        </main>
-
-
-        <footer id="footer">
-            <div class="ft-wrap">
-                <h1 class="logo">
-                    <img src="./images/common/logo_wt.png" alt=""></a>
-                </h1>
-                <div class="lang">
-                    <a href="#">
-                        <span class="location">국가선택</span>
-                        <span class="location">한국</span>
-                    </a>
-                    </div>
+                    <a href="#">매장소개</a>
+                    <a href="#">크리에이션 메뉴</a>
+                  </li>
+                </ul>
                 <div class="separator"></div>
-                <div class="accordion ft-inner">
-                    <ul>
-                        <li class>
-                            <div class="title">
-                                <span>소개</span>
-                                <img src="/images/common/icon_more_wt.png" alt="">
-                            </div>
-                            <a href="#" class="desc">하겐다즈 소개</a>
-                            <a href="#" class="desc">제품</a>
-                            <a href="#" class="desc">스토어</a>
-                        </li>
-                        <li class>
-                            <div class="title">
-                                <span>도움이 필요하세요?</span>
-                                <img src="/images/common/icon_more_wt.png" alt="">
-                            </div>
-                            <a href="#" class="desc">고객 문의</a>
-                            <!-- <div class="desc">내용1</div> -->
-                            <a href="#" class="desc">쿠키 설정</a>
-                        </li>
-                        <li class>
-                            <div class="title">
-                                <span>법적고지</span>
-                                <img src="/images/common/icon_more_wt.png" alt="">
-                            </div>
-                            <a href="#" class="desc">이용 약관</a>
-                            <a href="#" class="desc">개인정보 취급 방침</a>
-                            <a href="#" class="desc">데이터 프라이버시 요청</a>
-                        </li>
-                    </ul>
+                <div class="gnb-lang">
+                  <a href="#">
+                    <span class="location">국가선택</span>
+                    <span class="location">한국</span>
+                  </a>
                 </div>
-                <div class="separator"></div>
-                <div class="ft-sns">
-                    <div class="cir">
-                        <a href="#" class="ytb">youtube</a>
-                    </div>
-                    <div class="cir">
-                        <a href="#" class="fb">facebook</a>
-                    </div>
-                    <div class="cir">
-                        <a href="#" class="ins">instagram</a>
-                    </div>
-                    
-                    
-                    
-                    <!-- 글씨로 넣고, 백그라운드로 이미지 깔기 -->
-                </div>
-
-                <div class="copyright">
-                    ⓒ 2023 General Mills. All Rights Reserved.
-                </div>
+              </nav>
             </div>
-        </footer>
+          </div>
+          <button class="btn-search">
+            <span class="blind">검색</span>
+          </button>
+        </div>
+      </header>
+
+      <main id="main">
+        <span class="blind">main</span>
+        <section id="intro-section">
+          <!-- Swiper -->
+          <!-- Autoplay, infinite loop -->
+          <div class="swiper swiperIntro">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/main/m/m_slide1.jpg" alt="" />
+                <!-- ★★★★★★★★★★★★★★★★★ -->
+                <div class="text-wrap">
+                  <div class="logo-hd"></div>
+                  <div class="cross">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </div>
+                  <div class="logo-ph"></div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="./images/main/m/m_slide2.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+        <section class="best-section">
+          <!-- Swiper -->
+          <!-- slides per view auto -->
+          <div class="swiper swiperBest">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide pdtBox">
+                <div class="thumb">
+                  <img
+                    src="./images/main/macaron_double_chocolate_fint.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="name">
+                    하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml
+                  </div>
+                  <div class="priceBox">
+                    <strong class="price">15,500</strong>
+                    <span class="sale">25%</span>
+                    <span class="cost">31,000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide pdtBox">
+                <div class="thumb">
+                  <img
+                    src="./images/main/macaron_strawberry_raspberry_fint.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="name">
+                    하겐다즈 마카롱 스트로베리&라즈베리 (파인트) 403ml
+                  </div>
+                  <div class="priceBox">
+                    <strong class="price">15,500</strong>
+                    <span class="sale"></span>
+                    <span class="cost"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide pdtBox">
+                <div class="thumb">
+                  <img
+                    src="./images/main/macaron_double_chocolate_fint.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="name">
+                    하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml
+                  </div>
+                  <div class="priceBox">
+                    <strong class="price">15,500</strong>
+                    <span class="sale">25%</span>
+                    <span class="cost">31,000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide pdtBox">
+                <div class="thumb">
+                  <img
+                    src="./images/main/macaron_double_chocolate_fint.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="name">
+                    하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml
+                  </div>
+                  <div class="priceBox">
+                    <strong class="price">15,500</strong>
+                    <span class="sale">25%</span>
+                    <span class="cost">31,000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide pdtBox">
+                <div class="thumb">
+                  <img
+                    src="./images/main/macaron_double_chocolate_fint.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="name">
+                    하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml
+                  </div>
+                  <div class="priceBox">
+                    <strong class="price">15,500</strong>
+                    <span class="sale">25%</span>
+                    <span class="cost">31,000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide pdtBox">
+                <div class="thumb">
+                  <img
+                    src="./images/main/macaron_double_chocolate_fint.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <div class="name">
+                    하겐다즈 마카롱 더블 초콜릿 가나슈 (파인트) 403ml
+                  </div>
+                  <div class="priceBox">
+                    <strong class="price">15,500</strong>
+                    <span class="sale">25%</span>
+                    <span class="cost">31,000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </section>
+
+        <section class="ytb-section">
+          <div class="ytb_wrap">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/hOGObbGY6FU?si=St7uPtI5rhSuFgr_&amp;controls=0&autoplay=1&mute=1&loop=1&showinfo=0&cc_load_policy=0&iv_load_policy=3&autohide=1&playsinline=1&playlist=hOGObbGY6FU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+
+        <section class="fp-section">
+          <div class="fp-wrap">
+            <div class="ele imgBox brand"></div>
+            <div class="ele textBox brand">
+              <p>BRAND</p>
+              <span
+                >비교할 수 없는 퀄리티의 아이스크림,
+                <br />
+                하겐다즈의 59년 역사를 확인해보세요.</span
+              >
+            </div>
+          </div>
+          <div class="fp-wrap">
+            <div class="ele imgBox quality"></div>
+            <div class="ele textBox quality">
+              <p>QUALITY</p>
+              <span
+                >하겐다즈의 엄격한 원칙을 바탕으로 만든 아이스크림 <br /><br />
+                그 시작과 끝은 고품질의 원료와
+                <br />
+                60년 넘게 이어져 온 철저한 장인정신 입니다.
+              </span>
+            </div>
+          </div>
+          <div class="fp-wrap">
+            <div class="ele imgBox contact"></div>
+            <div class="ele textBox contact">
+              <p>CONTACT</p>
+              <span
+                >고객과 오너에게 가장 탁월한 선택
+                <br />
+                하겐다즈가 제공하는 맞춤형 비즈니스 솔루션을 경험해보세요.</span
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <div class="ft-wrap">
+          <h1 class="logo">
+            <img src="./images/common/logo_wt.png" alt="" />
+          </h1>
+          <div class="lang">
+            <a href="#">
+              <span class="location">국가선택</span>
+              <span class="location">한국</span>
+            </a>
+          </div>
+          <div class="separator"></div>
+          <div class="accordion ft-inner">
+            <ul>
+              <li class>
+                <div class="title">
+                  <span>소개</span>
+                  <img src="/images/common/icon_more_wt.png" alt="" />
+                </div>
+                <a href="#" class="desc">하겐다즈 소개</a>
+                <a href="#" class="desc">제품</a>
+                <a href="#" class="desc">스토어</a>
+              </li>
+              <li class>
+                <div class="title">
+                  <span>도움이 필요하세요?</span>
+                  <img src="/images/common/icon_more_wt.png" alt="" />
+                </div>
+                <a href="#" class="desc">고객 문의</a>
+                <!-- <div class="desc">내용1</div> -->
+                <a href="#" class="desc">쿠키 설정</a>
+              </li>
+              <li class>
+                <div class="title">
+                  <span>법적고지</span>
+                  <img src="/images/common/icon_more_wt.png" alt="" />
+                </div>
+                <a href="#" class="desc">이용 약관</a>
+                <a href="#" class="desc">개인정보 취급 방침</a>
+                <a href="#" class="desc">데이터 프라이버시 요청</a>
+              </li>
+            </ul>
+          </div>
+          <div class="separator"></div>
+          <div class="ft-sns">
+            <div class="cir">
+              <a href="#" class="ytb">youtube</a>
+            </div>
+            <div class="cir">
+              <a href="#" class="fb">facebook</a>
+            </div>
+            <div class="cir">
+              <a href="#" class="ins">instagram</a>
+            </div>
+
+            <!-- 글씨로 넣고, 백그라운드로 이미지 깔기 -->
+          </div>
+
+          <div class="copyright">
+            ⓒ 2023 General Mills. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

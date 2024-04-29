@@ -135,7 +135,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
-  color: $txtDefult;
+  color: black;
+  // color: $txtDefult;
 }
 
 /* desktop */
@@ -149,6 +150,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #fff;
 
   &:active,
   &:hover {
