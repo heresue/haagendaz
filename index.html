@@ -84,6 +84,7 @@
 
     <!-- jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
 
     <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -327,8 +328,8 @@
           </div>
         </section>
 
-        <section class="fp-section">
-          <div class="fp-wrap">
+        <section class="fp-section" id="fullPage">
+          <div class="fp-wrap fullScroll">
             <div class="ele imgBox brand"></div>
             <div class="ele textBox brand">
               <p>BRAND</p>
@@ -339,7 +340,7 @@
               >
             </div>
           </div>
-          <div class="fp-wrap">
+          <div class="fp-wrap fullScroll">
             <div class="ele imgBox quality"></div>
             <div class="ele textBox quality">
               <p>QUALITY</p>
@@ -351,7 +352,7 @@
               </span>
             </div>
           </div>
-          <div class="fp-wrap">
+          <div class="fp-wrap fullScroll">
             <div class="ele imgBox contact"></div>
             <div class="ele textBox contact">
               <p>CONTACT</p>
@@ -365,7 +366,7 @@
         </section>
       </main>
 
-      <footer id="footer">
+      <footer id="footer" class="fullScroll">
         <div class="ft-wrap">
           <h1 class="logo">
             <img src="./images/common/logo_wt.png" alt="" />
@@ -428,6 +429,56 @@
           </div>
         </div>
       </footer>
+      <script>
+        window.onload = function () {
+          var elm = ".fullScroll";
+          $(elm).each(function (index) {
+            // 개별적으로 Wheel 이벤트 적용
+            if (index < 4) return;
+            $(this).on("mousewheel DOMMouseScroll", function (e) {
+              e.preventDefault();
+              var delta = 0;
+              if (!event) event = window.event;
+              if (event.wheelDelta) {
+                delta = event.wheelDelta / 120;
+                if (window.opera) delta = -delta;
+              } else if (event.detail) delta = -event.detail / 3;
+              var moveTop = $(window).scrollTop();
+              var elmSelecter = $(elm).eq(index);
+              // 마우스휠을 위에서 아래로
+              if (delta < 0) {
+                if ($(elmSelecter).next() != undefined) {
+                  try {
+                    moveTop = $(elmSelecter).next().offset().top;
+                  } catch (e) {}
+                } else {
+                  moveTop = $("#footer").offset().top;
+                }
+                // 마우스휠을 아래에서 위로
+              } else {
+                if ($(elmSelecter).prev() != undefined) {
+                  try {
+                    moveTop = $(elmSelecter).prev().offset().top;
+                  } catch (e) {}
+                }
+              }
+
+              // 화면 이동 0.8초(800)
+              $("html,body")
+                .stop()
+                .animate(
+                  {
+                    scrollTop: moveTop + "px",
+                  },
+                  {
+                    duration: 800,
+                    complete: function () {},
+                  }
+                );
+            });
+          });
+        };
+      </script>
     </div>
   </body>
 </html>
