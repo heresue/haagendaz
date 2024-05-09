@@ -21,7 +21,6 @@
 //   title.addEventListener("click", toggleAccordion);
 // });
 
-
 // 아코디언이 여러개 있는 경우
 const accordions = document.querySelectorAll(".accordion");
 
@@ -44,8 +43,6 @@ accordions.forEach((accordion) => {
     title.addEventListener("click", toggleAccordion);
   });
 });
-
-
 
 // header
 // 준비이벤트 (위에 넣어줄 때는 준비이벤트를 넣어줘야 읽힘)
@@ -74,26 +71,24 @@ $(function () {
       const $scrolled = $window.scrollTop();
       // console.log("윈도우의 스크롤 값 : " + $scrolled)
 
-                  // 윈도우의 스크롤 값이 header의 위치값보다 커졌을 때
-                  if ($scrolled > headerOffsetTop) {
-                      // 참일 경우
-                      // header에 .sticky 추가
-                      $header.addClass('sticky')
-                      // $header.addClass('sticky') 대신 gsap 넣어도 된다
-                  }else {
-                      // 거짓일 경우
-                      // header에 .sticky 제거
-                      $header.removeClass('sticky')
-                  }
-              })
-              
-              // trigger: 스크롤 이벤트를 강제로 발생시키는 역할
-              //      이미 발생한 것 같이 보여줌 (새로고침했을때 sticky가 계속 적용되어 있음)
-              $window.trigger("scroll")
-          })
-      })
+      // 윈도우의 스크롤 값이 header의 위치값보다 커졌을 때
+      if ($scrolled > headerOffsetTop) {
+        // 참일 경우
+        // header에 .sticky 추가
+        $header.addClass("sticky");
+        // $header.addClass('sticky') 대신 gsap 넣어도 된다
+      } else {
+        // 거짓일 경우
+        // header에 .sticky 제거
+        $header.removeClass("sticky");
+      }
+    });
 
-
+    // trigger: 스크롤 이벤트를 강제로 발생시키는 역할
+    //      이미 발생한 것 같이 보여줌 (새로고침했을때 sticky가 계속 적용되어 있음)
+    $window.trigger("scroll");
+  });
+});
 
 // intro-section
 var swiper = new Swiper(".swiperIntro", {
@@ -135,7 +130,6 @@ var swiper = new Swiper(".swiperBest", {
 // });
 
 // ytb-section
-
 document.addEventListener("DOMContentLoaded", function () {
   const ytbSection = document.querySelector(".ytb-section");
   const ytbWrap = document.querySelector(".ytb_wrap");
@@ -146,16 +140,57 @@ document.addEventListener("DOMContentLoaded", function () {
     let bounds = ytbSection.getBoundingClientRect();
     const scrollPercentage =
       window.scrollY / (ytbSection.offsetHeight - window.innerHeight);
-
+    const scroll2 =
+      window.scrollY - console.log("scrollpercent:" + scrollPercentage);
+    console.log("스크롤y:" + this.window.scrollY);
+    console.log("섹션오프셋하이트:" + ytbSection.offsetHeight);
+    console.log("윈도우이너하이트:" + window.innerHeight);
+    console.log("bounds:" + bounds);
     if (bounds.top < window.innerHeight && bounds.bottom >= 0) {
       // 스크롤 값이 ytb-section의 시작 위치를 넘어갈 때
       const clipPathValue = 0 + scrollPercentage * 1; // 예시: 10에서 60 사이의 값으로 변경
-      ytbWrap.style.clipPath = `inset(${clipPathValue}%)`;
+      ytbWrap.style.clipPath = `inset(${0}%)`;
+      this.document.body.style.background = `black`;
+      this.document.body.style.transition = `0.3s`;
+    } else {
+      ytbWrap.style.clipPath = `inset(${50}%)`;
+      this.document.body.style.background = `white`;
+      this.document.body.style.transition = `0.3s`;
     }
   });
 });
 
-// fp-section
+// fp-section ★★★★★★★★★★★스크롤이벤트 고민
+// let panels = gsap.utils.toArray(".fullScroll");
+// let tops = panels.map((panel) =>
+//   ScrollTrigger.create({ trigger: panel, start: "top top" })
+// );
+
+// panels.forEach((panel, i) => {
+//   ScrollTrigger.create({
+//     trigger: panel,
+//     start: () =>
+//       panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
+//     pin: true,
+//     pinSpacing: false,
+//   });
+// });
+
+// ScrollTrigger.create({
+//   snap: {
+//     snapTo: (progress, self) => {
+//       let panelStarts = tops.map((st) => st.start),
+//         snapScroll = gsap.utils.snap(panelStarts, self.scroll());
+//       return gsap.utils.normalize(
+//         0,
+//         ScrollTrigger.maxScroll(window),
+//         snapScroll
+//       );
+//     },
+//     duration: 0.8,
+//   },
+// });
+
 // 윈도우에 스크롤 이벤트를 걸어줌
 window.addEventListener("scroll", function () {
   const section = document.querySelectorAll(".fp-wrap");
@@ -179,6 +214,9 @@ window.addEventListener("scroll", function () {
   });
 });
 
+
+
+
 // footer
 // menu
 const accordion = document.querySelector(".accordion");
@@ -199,4 +237,3 @@ const titles = accordion.querySelectorAll(".title");
 titles.forEach((title) => {
   title.addEventListener("click", toggleAccordion);
 });
-
