@@ -361,6 +361,9 @@ legend {
   transition: all 0.3s;
 }
 
+.gnb-wrap .bar {
+  background: white;
+}
 .gnb-wrap .inp-burger {
   position: absolute;
   top: 0;
@@ -400,14 +403,13 @@ legend {
   width: 20px;
   height: 1px;
   border-radius: 1px;
-  background: white;
   transition: all 0.3s;
 }
 .gnb-wrap #gnb {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  background: black;
+  width: 80%;
+  height: 100vh;
+  background: white;
   transform-origin: 0 0;
   transform: translate(-100% 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -451,56 +453,6 @@ legend {
   display: block;
   padding: 16px;
   font-size: 16px;
-}
-
-.inp-burger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: none;
-  opacity: 0;
-  visibility: hidden;
-}
-.inp-burger:checked + .label-burger .bar {
-  background: black;
-}
-.inp-burger:checked + .label-burger .bar:nth-child(2) {
-  transform: rotate(45deg);
-}
-.inp-burger:checked + .label-burger .bar:nth-child(3) {
-  display: none;
-}
-.inp-burger:checked + .label-burger .bar:nth-child(4) {
-  transform: rotate(-45deg) translateY(-1px);
-}
-.inp-burger:checked #gnb input:checked ~ ul {
-  transform: none;
-}
-.inp-burger:checked #gnb input:checked ~ ul ~ #gnb {
-  left: 0;
-}
-.inp-burger .label-burger {
-  position: absolute;
-  left: 16px;
-  z-index: 1100;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  cursor: pointer;
-}
-.inp-burger .label-burger .bar {
-  display: block;
-  width: 20px;
-  height: 1px;
-  border-radius: 1px;
-  background: white;
-  transition: all 0.5s;
-}
-.inp-burger .label-burger span:nth-child(3) {
-  margin: 5px 0;
 }
 
 #header.sticky .header-fix {

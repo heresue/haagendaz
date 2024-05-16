@@ -91,6 +91,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
+    <!-- lenis (스크롤) -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- 내꺼 제일아래 -->
     <link rel="stylesheet" href="./assets/css/comm.css" />
     <script defer src="./assets/js/comm.js"></script>
@@ -425,57 +432,11 @@
           </div>
 
           <div class="copyright">
-            ⓒ 2023 General Mills. All Rights Reserved.
+            ⓒ 2024 General Mills. All Rights Reserved.
           </div>
         </div>
       </footer>
-      <script>
-        window.onload = function () {
-          var elm = ".fullScroll";
-          $(elm).each(function (index) {
-            // 개별적으로 Wheel 이벤트 적용
-            $(this).on("mousewheel DOMMouseScroll", function (e) {
-              e.preventDefault();
-              var delta = 0;
-              if (!event) event = window.event;
-              if (event.wheelDelta) {
-                delta = event.wheelDelta / 120;
-                if (window.opera) delta = -delta;
-              } else if (event.detail) delta = -event.detail / 3;
-              var moveTop = $(window).scrollLeft();
-              var elmSelecter = $(elm).eq(index);
-              // 마우스휠을 위에서 아래로
-              if (delta < 0) {
-                if ($(elmSelecter).next() != undefined) {
-                  try {
-                    moveTop = $(elmSelecter).next().offset().left;
-                  } catch (e) {}
-                }
-                // 마우스휠을 아래에서 위로
-              } else {
-                if ($(elmSelecter).prev() != undefined) {
-                  try {
-                    moveTop = $(elmSelecter).prev().offset().left;
-                  } catch (e) {}
-                }
-              }
-
-              // 화면 이동 0.8초(800) 화면이동!!
-              $("html,body")
-                .stop()
-                .animate(
-                  {
-                    scrollLeft: moveTop + "px",
-                  },
-                  {
-                    duration: 800,
-                    complete: function () {},
-                  }
-                );
-            });
-          });
-        };
-      </script>
+      <script></script>
     </div>
   </body>
 </html>

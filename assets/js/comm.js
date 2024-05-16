@@ -1,3 +1,14 @@
+const lenis = new Lenis({
+  duration: 2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 // menu accordion
 
 // 아코디언이 하나만 있는 경우
@@ -213,9 +224,6 @@ window.addEventListener("scroll", function () {
     }
   });
 });
-
-
-
 
 // footer
 // menu
