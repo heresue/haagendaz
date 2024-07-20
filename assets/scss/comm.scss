@@ -104,7 +104,6 @@
   background-image: url(/images/common/icon_search_wt.png);
   transition: all 0.3s;
 }
-
 .gnb-wrap {
   .bar {
     background: white;
@@ -143,7 +142,7 @@
       // ~ :형제 선택자 (일반 형제 선택)
       & ~ #gnb {
         display: flex;
-        right: 0;
+        left: 0%;
       }
     }
   }
@@ -169,23 +168,23 @@
 
   #gnb {
     position: absolute;
-    width: 80%;
+    width: 80vw;
     height: 100vh;
+    left: -100%;
     background: white;
     transform-origin: 0 0;
-    transform: translate(-100% 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     // height: 100vh;
-    #gnb {
-      display: flex;
-      width: 100%;
-      height: 100vh;
-      background: gray;
-      position: absolute;
-      left: -100vw;
-      top: 0;
-      transition: all 0.5s;
-    }
+    // #gnb {
+    //   display: flex;
+    //   width: 100%;
+    //   height: 100vh;
+    //   background: gray;
+    //   position: absolute;
+    //   left: -100vw;
+    //   top: 0;
+    //   transition: all 0.5s;
+    // }
     .gnb-inner {
       width: 100%;
     }

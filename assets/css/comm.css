@@ -385,7 +385,7 @@ legend {
 }
 .gnb-wrap .inp-burger:checked ~ #gnb {
   display: flex;
-  right: 0;
+  left: 0%;
 }
 .gnb-wrap .label-burger {
   position: absolute;
@@ -407,22 +407,12 @@ legend {
 }
 .gnb-wrap #gnb {
   position: absolute;
-  width: 80%;
+  width: 80vw;
   height: 100vh;
+  left: -100%;
   background: white;
   transform-origin: 0 0;
-  transform: translate(-100% 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-.gnb-wrap #gnb #gnb {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background: gray;
-  position: absolute;
-  left: -100vw;
-  top: 0;
-  transition: all 0.5s;
+  transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 .gnb-wrap #gnb .gnb-inner {
   width: 100%;

@@ -114,11 +114,14 @@
             <!-- 로고가 가운데에 위치하는 경우에도 logo먼저 적어준다(bcs웹접근성(먼저읽어줘야하니까)) -->
             <a href="/"> </a>
           </h1>
+          <button class="btn-search">
+            <span class="blind">검색</span>
+          </button>
           <div class="col-left">
             <!-- gnb -->
             <div class="gnb-wrap">
               <!-- 동적처리가 가능한 부분이기에 카멜표기법으로(gnbNav) -->
-              <input type="checkbox" id="gnbNav" class="inp-burger" />
+              <input type="checkbox" checked id="gnbNav" class="inp-burger" />
               <!-- id 앞에 checked 붙이면 체크된상태로 시작 -->
               <!-- input&label > id, for값 동일해야함-->
 
@@ -167,9 +170,6 @@
               </nav>
             </div>
           </div>
-          <button class="btn-search">
-            <span class="blind">검색</span>
-          </button>
         </div>
       </header>
 
